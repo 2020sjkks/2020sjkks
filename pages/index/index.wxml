@@ -1,0 +1,8 @@
+<view class='container'>
+  <block wx:for="{{goods}}" wx:key="index">
+    <view class='text-content' data-index="{{index}}" bindtap="get_good_info">{{item}}</view> 
+  </block>
+  
+</view>
+<view>hello</view>
+<image src="http://brucemarkdown.top:5000/image/1.jpg"></image>
