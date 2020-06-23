@@ -1,0 +1,5 @@
+<view class='container'>
+  <block wx:for="{{goods}}" wx:key="index">
+    <view class='text-content' data-index="{{index}}" bindtap="get_good_info">{{item}}</view> 
+  </block>
+</view>
