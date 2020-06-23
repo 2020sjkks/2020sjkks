@@ -11,7 +11,7 @@ Page({
     wx.request({
       url: 'http://brucemarkdown.top:5000/goods',
       complete: (res) => {
-        console.log(res);
+        //console.log(res);
         this.setData({
           goods:res["data"],
         })
@@ -20,8 +20,8 @@ Page({
   },
   get_good_info:function(e){
     var index=parseInt(e.currentTarget.dataset.index);
-    wx.navigateTo({ 
-      url: '/pages/good_info/index?good_id='+index,
+    wx.navigateTo({
+      url: '/pages/good_info/good_info?good_id='+index,
     })
   }
 

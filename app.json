@@ -1,10 +1,10 @@
 {
   "pages":[
-    "pages/login/index",
+    "pages/login/login",
     "pages/index/index",
-    "pages/order/index",
-    "pages/user/index",
-    "pages/good_info/index"
+    "pages/order/order",
+    "pages/user/user",
+    "pages/good_info/good_info"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -22,13 +22,13 @@
       "selectedIconPath":"imgs/主页1.png"
     },
     {
-      "pagePath": "pages/order/index",
+      "pagePath": "pages/order/order",
       "text": "订单",
       "iconPath":"imgs/订单.png",
       "selectedIconPath":"imgs/订单1.png"
     },
     {
-      "pagePath": "pages/user/index",
+      "pagePath": "pages/user/user",
       "text": "用户",
       "iconPath":"imgs/用户.png",
       "selectedIconPath":"imgs/用户1.png"
