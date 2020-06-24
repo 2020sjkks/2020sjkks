@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-<view>{{good_id}}</view>
-=======
+
 <view class='img'>
 <image class='pic' src="{{img_path}}"></image>
 </view>
 <view class="content">{{good_detail}}</view>
 <view>{{good_id}}</view>
->>>>>>> wei
-<image src="{{img_path}}"></image>

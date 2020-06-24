@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-<view class='container'>
-  <block wx:for="{{goods}}" wx:key="index">
-    <view class='text-content' data-index="{{index}}" bindtap="get_good_info">{{item}}</view> 
-  </block>
-=======
+
 <button bindtap="getGoods" class="refresh">刷新界面</button>
 <view class='container'>
   <block  wx:for="{{goods}}" wx:key="index">
@@ -13,9 +8,4 @@
     <view></view>
   </block>
 </view>
-<view class='container'>
-  <block wx:for="{{goods}}" wx:key="index">
-    <view class='text-content' data-index="{{index}}" bindtap="get_good_info">{{item}}</view> 
-  </block>
->>>>>>> wei
-</view>
+
