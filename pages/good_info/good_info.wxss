@@ -1,0 +1,9 @@
+.img{
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  
+}
+.pic{
+  border:5px solid skyblue;
+}

@@ -22,7 +22,7 @@ Page({
   },
   get_good_info:function(e){
     var index=parseInt(e.currentTarget.dataset.index);
-    wx.navigateTo({
+    wx.navigateTo({  //提交参数到商品明细页：商品id、商品图片名称、商品介绍
       url: '/pages/good_info/good_info?good_detail='+this.data.goods[index][2]+
       '&good_id='+index+'&img='+this.data.goods[index][3]
     })

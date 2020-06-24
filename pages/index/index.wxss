@@ -1,13 +1,17 @@
-.container{
-  padding: 10px 20px;
-  align-content: left;
-}
+
 .text-content{
-  padding: 10px;
-  vertical-align:left;
+  padding: 5px;
   border-bottom: 1rpx solid #707070;
-  background-color:#FFFFFF
+  background-color:#FFFFFF;
 }
 .price{
   color: rgb(219, 64, 64);
+  line-height: 40px;
+}
+.img{
+  border-radius: 10%;
+  border: 4px solid skyblue;
+}
+.refresh{
+  background-color: rgb(54, 156, 240);
 }

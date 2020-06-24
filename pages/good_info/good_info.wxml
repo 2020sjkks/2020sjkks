@@ -1,2 +1,4 @@
-<image class="img" src="{{img_path}}"></image>
+<view class='img'>
+<image class='pic' src="{{img_path}}"></image>
+</view>
 <view class="content">{{good_detail}}</view>
