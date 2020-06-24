@@ -1,20 +1,14 @@
 Page({
   data:{
-    good_id:null,
-    img_path:null
+    good_index:null,
+    good_detail:null,
+    img_path:null,
   },
   onLoad:function(options){
     this.setData({
-      good_id:options.good_id
+      good_detail:options.good_detail,
+      good_id:options.good_id,
+      img_path:"http://brucemarkdown.top:5000/image/"+options.img+'.jpg'
     });
-    wx.request({
-      url: 'http://brucemarkdown.top:5000/image_path',
-      complete: (res) => {
-        this.setData({
-          img_path:'http://brucemarkdown.top:5000/image/'+res["data"],
-        })
-      },
-    })
-
   }
 })

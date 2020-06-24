@@ -1,2 +1,2 @@
-<view>{{good_id}}</view>
-<image src="{{img_path}}"></image>
+<image class="img" src="{{img_path}}"></image>
+<view class="content">{{good_detail}}</view>

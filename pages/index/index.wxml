@@ -1,5 +1,8 @@
 <view class='container'>
   <block wx:for="{{goods}}" wx:key="index">
-    <view class='text-content' data-index="{{index}}" bindtap="get_good_info">{{item}}</view> 
+    <image src="http://brucemarkdown.top:5000/image/{{item[3]}}.jpg" data-index="{{index}}" bindtap="get_good_info" ></image>
+    <view class='text-content' data-index="{{index}}" bindtap="get_good_info">{{item[1]}}</view> 
+    <view class="price">{{item[4]}}元</view>
   </block>
 </view>
+<button bindtap="getGoods" class></button>
