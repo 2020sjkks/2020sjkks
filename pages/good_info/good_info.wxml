@@ -2,3 +2,5 @@
 <image class='pic' src="{{img_path}}"></image>
 </view>
 <view class="content">{{good_detail}}</view>
+<view>{{good_id}}</view>
+<image src="{{img_path}}"></image>
