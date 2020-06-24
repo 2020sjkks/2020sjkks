@@ -1,4 +1,0 @@
-<input placeholder="账户" bindinput='getUsername' />
-<input placeholder="密码" bindinput='getPassword' type="password"  />
-<button bindtap="login">登录</button>
-<button bindtap="register">注册</button>
