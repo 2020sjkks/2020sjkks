@@ -1,17 +1,43 @@
 
-.text-content{
-  padding: 5px;
-  border-bottom: 1rpx solid #707070;
-  background-color:#FFFFFF;
+.list{
+  margin-top:10px;
 }
-.price{
-  color: rgb(219, 64, 64);
-  line-height: 40px;
+.list .list_item{
+  margin-top:10px;
+  padding:10px;
+  height:100px;
+  border-bottom:1px solid #E8E8E8;
 }
-.img{
-  border-radius: 10%;
-  border: 4px solid skyblue;
+.list .list_item .img{
+  float:left;
+  width:40%;
+  height:100%;
+}
+.list .list_item .img image{
+  width:100%;
+  height:100%;
+}
+.list .list_item .info{
+  width:59%;
+  float:right;
+  height:100px;
+  position:relative;
+}
+.list .list_item .info .title{
+  color:#333;
+  margin-left:10px;
+  font-size: 15px;
+}
+.list .list_item .info .price{
+  color:#FF2727;
+  margin-left:10px;
+  margin-top:10px;
+  font-size:15px;
 }
 .refresh{
-  background-color: rgb(54, 156, 240);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: rgb(123,191,234);
+  color: white;
+  border-radius: 20px; 
 }

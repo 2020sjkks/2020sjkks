@@ -1,4 +1,7 @@
-<input placeholder="账户" bindinput='getUsername' value='{{name}}' />
-<input placeholder="密码" bindinput='getPassword' type="password" value='{{password}}'/>
-<button bindtap="login">登录</button>
-<button bindtap="register">注册</button>
+
+<view class='small'>
+<input placeholder-class="placeholder1" class="input1" placeholder="账户" bindinput='getUsername' value='{{name}}' />
+<input placeholder-class="placeholder1" class="input1" placeholder="密码" bindinput='getPassword' type="password" value='{{password}}'/>
+<button class="button1" bindtap="login">登录</button>
+<button class='button1' bindtap="register">注册</button>
+</view>

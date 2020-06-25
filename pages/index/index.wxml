@@ -1,11 +1,15 @@
-
 <button bindtap="getGoods" class="refresh">刷新界面</button>
-<view class='container'>
+<view class='list'>
   <block  wx:for="{{goods}}" wx:key="index">
-    <image class='img' src="http://brucemarkdown.top:5000/image/{{item[3]}}.jpg" data-index="{{index}}" bindtap="get_good_info" ></image>
-    <view class='text-content' data-index="{{index}}" bindtap="get_good_info">{{item[1]}}</view> 
-    <view class="price">{{item[4]}}元</view>
-    <view></view>
+  <view class='list_item'>
+    <view class='img'>
+      <image src="http://brucemarkdown.top:5000/image/{{item[3]}}.jpg" data-index="{{index}}" bindtap="get_good_info" ></image>
+    </view>
+    <view class='info'>
+      <view class='title' data-index="{{index}}" bindtap="get_good_info">{{item[1]}}</view> 
+      <view class="price">￥{{item[4]}}</view>
+    </view>
+  </view>
   </block>
 </view>
 
