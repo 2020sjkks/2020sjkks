@@ -1,4 +1,3 @@
-
 <view class='small'>
 <input placeholder-class="placeholder1" class="input1" placeholder="账户" bindinput='getUsername' value='{{name}}' />
 <input placeholder-class="placeholder1" class="input1" placeholder="密码" bindinput='getPassword' type="password" value='{{password}}'/>

@@ -1,1 +1,29 @@
-/* pages/user/index.wxss */
+.hr {
+  width: 100%;
+  height: 15px;
+  background-color:#f4f5f6;
+}
+.item {
+  display: flex;
+  flex-direction: row;
+}
+.title {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  font-size: 15px;
+}
+
+.detail2 {
+  font-size: 15px;
+  position: absolute;
+  right: 10px;
+  height: 50px;
+  line-height: 50px;
+  color:rgb(123,191,234);
+}
+
+.line {
+  border: 1px solid rgb(123,191,234);
+  opacity: 0.2;
+}

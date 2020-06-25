@@ -48,7 +48,10 @@ Page({
           var app=getApp(); 
           app.globalData.uid=res.data['user_info'][0] 
           app.globalData.uname=res.data['user_info'][1] 
+          app.globalData.uphoto=res.data['user_info'][2] 
+          app.globalData.uaddress=res.data['user_info'][3] 
           app.globalData.upassword=res.data['user_info'][4] 
+          app.globalData.uphone=res.data['user_info'][5]
           wx.switchTab({
             url: "/pages/index/index",
           })

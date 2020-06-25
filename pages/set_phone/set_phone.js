@@ -1,52 +1,60 @@
-// pages/user/index.js
+// pages/set_phone/set_phone.js
 Page({
   /**
    * 页面的初始数据
    */
   data: {
+    uphone:null,
     uid:null,
-    uname:null,
-    uphoto:null,
-    uaddress:null,
-    upassword:null,
-    uphone:null
+    input:''
+
   },
-  exit:function(){
-    wx.reLaunch({
-      url: '/pages/login/login',
-    })
-  },
-  set_address(){
-    wx.navigateTo({
-      url: '/pages/set_address/set_address',
-    })
-    
-  },
-  set_phone(){
-    wx.navigateTo({
-      url: '/pages/set_phone/set_phone',
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     var app=getApp(); 
     this.setData({
+      uphone:app.globalData.uphone,
       uid:app.globalData.uid,
-      uname:app.globalData.uname,
-      uphoto:app.globalData.uphoto,
-      uaddress:app.globalData.uaddress,
-      upassword:app.globalData.upassword,
-      uphone:app.globalData.uphone
     })
   },
-
+  setphone:function(){
+    var app=getApp(); 
+    let input = this.data.input
+    let uid = this.data.uid
+    console.log(input)
+    wx.request({
+      url: 'http://brucemarkdown.top:5000/setphone',
+      data: {
+        input:input,
+        uid:uid
+      },
+      method:"POST",
+      success: (res) => {
+        if(res.data=='succeed'){
+          wx: wx.showToast({
+            title: '设置成功'
+          })
+          app.globalData.uphone=input
+          this.setData({
+            uphone:input,
+            input:''
+          })
+        }
+    }})
+    console.log(app.globalData.uphone)
+  },
+  getinput(e){
+    this.setData({
+      input:e.detail.value
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
   },
 
   /**

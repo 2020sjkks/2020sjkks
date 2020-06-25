@@ -68,8 +68,27 @@
 				},
 				{
 					"id": -1,
+<<<<<<< HEAD
 					"name": "pages/index/index",
 					"pathName": "pages/index/index",
+=======
+					"name": "pages/user/user",
+					"pathName": "pages/user/user",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/set_phone/set_phone",
+					"pathName": "pages/set_phone/set_phone",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/set_address/set_address",
+					"pathName": "pages/set_address/set_address",
+>>>>>>> 000c970ff47e4a242752f5427c9dfac81c0ca5f1
 					"scene": null
 				}
 			]

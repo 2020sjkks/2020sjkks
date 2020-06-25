@@ -6,6 +6,9 @@
     "pages/user/user",
     "pages/good_info/good_info",
     "pages/shoppingcart/shoppingcart"
+    "pages/set_phone/set_phone",
+    "pages/set_address/set_address"
+
   ],
   "window": {
     "backgroundTextStyle": "light",
