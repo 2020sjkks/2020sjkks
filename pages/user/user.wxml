@@ -1,1 +1,35 @@
-<button bindtap="exit">退出登录</button>
+ <view class='user1'>
+ <view class="name1"></view>
+ </view>
+ <view class='item' bindtap="set_phone">
+    <view class="title">手机绑定</view>
+    <view class="detail2">
+      <text>></text>
+    </view>
+</view>
+<view class="line"></view>
+
+<view class='item' bindtap="set_address" >
+  <view class="title">地址绑定</view>
+  <view class="detail2">
+    <text>></text>
+  </view>
+</view>
+<view class="line"></view>
+
+<view class="hr"></view>
+<view class="item" bindtap="setuser">
+  <view class="title">账户设置</view>
+  <view class="detail2">
+    <text> ></text>
+  </view>
+</view>
+<view class="line"></view>
+
+ <view class='item' bindtap="exit">
+    <view class="title">退出登录</view>
+    <view class="detail2">
+      <text>></text>
+    </view>
+</view>
+<view class="line"></view>

@@ -2,6 +2,9 @@ App({
   globalData:{
     uid:null,
     uname:null,
-    upassword:null
+    uphoto:null,
+    uaddress:null,
+    upassword:null,
+    uphone:null,
   }
 })

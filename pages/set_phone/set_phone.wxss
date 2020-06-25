@@ -1,0 +1,36 @@
+.input1{
+  border:  2px solid rgb(123,191,234);
+  border-radius: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 15px;
+  color: gray;
+  font-size:11px;
+}
+.placeholder1{
+  font-size: 11px;
+  text-align: center;
+  color:gray;
+}
+.button1 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: rgb(123,191,234);
+  color: white;
+  border-radius: 25px; 
+}
+.small{
+  border:  2px solid rgb(123,191,234);
+  background-color: white;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 200rpx;
+  margin-bottom: 200rpx;
+  border-radius: 15px; 
+}
+.nowphone {
+  padding-top: 15px;
+  padding-left: 25px;
+  font-size: 14px;
+  color: gray;
+}

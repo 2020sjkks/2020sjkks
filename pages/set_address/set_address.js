@@ -1,44 +1,52 @@
-// pages/user/index.js
+// pages/set_address/set_address.js
 Page({
   /**
    * 页面的初始数据
    */
   data: {
-    uid:null,
-    uname:null,
-    uphoto:null,
     uaddress:null,
-    upassword:null,
-    uphone:null
+    uid:null,
+    input:''
   },
-  exit:function(){
-    wx.reLaunch({
-      url: '/pages/login/login',
+  getinput(e){
+    this.setData({
+      input:e.detail.value
     })
   },
-  set_address(){
-    wx.navigateTo({
-      url: '/pages/set_address/set_address',
-    })
-    
+  setaddress:function(){
+    var app=getApp(); 
+    let input = this.data.input
+    let uid = this.data.uid
+    console.log(input)
+    wx.request({
+      url: 'http://brucemarkdown.top:5000/setaddress',
+      data: {
+        input:input,
+        uid:uid
+      },
+      method:"POST",
+      success: (res) => {
+        if(res.data=='succeed'){
+          wx: wx.showToast({
+            title: '设置成功'
+          })
+          app.globalData.uaddress=input
+          this.setData({
+            uaddress:input,
+            input:''
+          })
+        }
+    }})
   },
-  set_phone(){
-    wx.navigateTo({
-      url: '/pages/set_phone/set_phone',
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     var app=getApp(); 
     this.setData({
-      uid:app.globalData.uid,
-      uname:app.globalData.uname,
-      uphoto:app.globalData.uphoto,
       uaddress:app.globalData.uaddress,
-      upassword:app.globalData.upassword,
-      uphone:app.globalData.uphone
+      uid:app.globalData.uid,
     })
   },
 

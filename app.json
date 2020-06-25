@@ -4,7 +4,9 @@
     "pages/index/index",
     "pages/order/order",
     "pages/user/user",
-    "pages/good_info/good_info"
+    "pages/good_info/good_info",
+    "pages/set_phone/set_phone",
+    "pages/set_address/set_address"
   ],
   "window":{
     "backgroundTextStyle":"light",
