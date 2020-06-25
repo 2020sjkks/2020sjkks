@@ -1,0 +1,12 @@
+Page({
+  data:{
+    selected:{}
+  },
+  onLoad:function(options){
+    console.log(options.shop);
+    this.setData({
+      selected:JSON.parse(options.shop),
+    });
+    console.log(this.data.selected);
+  }
+})
