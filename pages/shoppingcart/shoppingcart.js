@@ -2,26 +2,33 @@ Page({
   data:{
     selected:{},
     goods:[],
-    id:''
+    id:'',
+    totalprice:0.0
   },
   onLoad:function(options){
     this.setData({
       selected:JSON.parse(options.shop),
       goods:JSON.parse(options.goods)
     });
-    //this.data.goods.slice();
+    //console.log(this.data.goods);
     var selectedgoods=[];
+    var totalprice=0.0;
     while(this.data.goods.length!=0){
       var item =this.data.goods.pop();
       if(this.data.selected[item[0]]!=0){
         selectedgoods.push(item);
+        totalprice=totalprice+this.data.selected[item[0]]*item[3]; //计算总价格
       }
+      //console.log(totalprice);
     }
     this.setData({
-        goods:selectedgoods.reverse()
+        goods:selectedgoods.reverse(),
+        totalprice:totalprice
     });
   },
   pay:function(){
+    var uid=getApp().globalData.uid;
+    console.log(uid);
     wx.showLoading({
       title: '正在下单',
     });
@@ -31,8 +38,10 @@ Page({
     //此处提交request
     wx.request({
       url: 'http://brucemarkdown.top:5000/order',
-      data: {
-        goods:this.data.selected  //菜品信息
+      data: { 
+        uid:uid,
+        goods:this.data.selected,  //菜品信息
+        totalprice:this.data.totalprice
       },
       method:"POST",
       success: (res) => {
