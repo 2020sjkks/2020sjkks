@@ -68,8 +68,6 @@
 				},
 				{
 					"id": -1,
-					"name": "pages/index/index",
-					"pathName": "pages/index/index",
 					"name": "pages/user/user",
 					"pathName": "pages/user/user",
 					"query": "",

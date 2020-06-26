@@ -1,1 +1,21 @@
-{{selected}}
+
+<text class="shoopingcart_title">支付清单</text>
+<view class='divideline'></view>
+<view class='list'>
+  <block  wx:for="{{goods}}" wx:key="index">
+  <view class='list_item'>
+    <view class='img'>
+      <image src="http://brucemarkdown.top:5000/image/{{item[3]}}.jpg" ></image>
+    </view>
+    <view class='info'>
+      <view class='title' data-index="{{index}}" >{{item[1]}}</view> 
+      <view class="price">￥{{item[4]}}</view>
+      <view class='selected' >x {{selected[item[0]]}} 份</view> 
+    </view>
+  </view>
+  </block>
+</view> 
+<button class="pay" bindtap="pay"> 支付 </button>
+订单号为{{id}}
+
+

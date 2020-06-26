@@ -1,4 +1,3 @@
-
 <view class='img'>
 <image class='pic' src="{{img_path}}"></image>
 </view>

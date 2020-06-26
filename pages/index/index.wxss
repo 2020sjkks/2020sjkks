@@ -29,11 +29,11 @@
 .list .list_item .info .title{
   color:#333;
   margin-left:10px;
-  font-size: 15px;
+  font-size: 20px;
 }
 .list .list_item .info .selected{
   color:#333;
-  margin-left:100px;
+  margin-left:135px;
   margin-top: -35px;
   font-size: 15px;
 }
@@ -69,13 +69,17 @@
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 50px;
-  
+  height: 45px;
 }
 .bottomview .cart{
   height: 40px;
-  width: 150px;
-  left: 90px;
+  width: 90px;
+  left: 130px;
   background-color: rgb(123,191,234);
-  border-radius: 0%;
+  border-radius: 20%;
+  color: white;
+  box-shadow: 0 0 3px #000000;
+}
+.blank{
+  height: 80px;
 }
