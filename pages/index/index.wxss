@@ -33,13 +33,8 @@
 }
 .list .list_item .info .selected{
   color:#333;
-<<<<<<< HEAD
-  margin-left:150px;
-  margin-top: -50px;
-=======
   margin-left:135px;
   margin-top: -35px;
->>>>>>> 767d231ae42b4843551b3ba3ce35dd3adce2b1c7
   font-size: 15px;
 }
 .list .list_item .info .price{
