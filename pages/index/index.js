@@ -1,7 +1,7 @@
 Page({
   data: {
     // 数据源
-    goods:[
+    goods:[//0:gid,1:gname,2:gphoto,3,gprice
     ],
     shopping_cart:{     //购物车商品 {菜品Aid:数量,菜品Bid:数量...}
 
@@ -9,6 +9,7 @@ Page({
   },
   onLoad:function(options){ 
     this.getGoods();
+    console.log(this.data.goods)
   },
   getGoods:function(){ //获取菜品信息
     console.log("tap");
@@ -32,9 +33,8 @@ Page({
   },
   get_good_info:function(e){
     var index=parseInt(e.currentTarget.dataset.index);
-    wx.navigateTo({  //提交参数到商品明细页：商品id、商品图片名称、商品介绍
-      url: '/pages/good_info/good_info?good_detail='+this.data.goods[index][2]+
-      '&good_id='+index+'&img='+this.data.goods[index][3]
+    wx.navigateTo({  //提交参数到商品明细页：商品id
+      url: '/pages/good_info/good_info?good_id='+this.data.goods[index][2]
     })
   },
   add_good:function(e){  //菜品添加到购物车
@@ -59,6 +59,7 @@ Page({
     //console.log(this.data.shopping_cart);
   },
   goto_shooping_cart:function(){
+    console.log(this.data.goods)
     //console.log(this.data.shopping_cart);
     var selected=0;
     for(let i in this.data.goods){ //检查是否有选择菜品
