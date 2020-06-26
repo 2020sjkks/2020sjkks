@@ -1,6 +1,19 @@
-
 <view class='img'>
-<image class='pic' src="{{img_path}}"></image>
+<image src="{{img_path}}" mode='widthFix'></image>
 </view>
-<view class="content">{{good_detail}}</view>
+<view class="good">
+  <view class='name'>干炒牛河</view>
+  <view class='price'>￥100</view>
+</view>
+<view class="detail">
+  {{good_detail}}
+</view>
+
 <view>{{good_id}}</view>
+
+
+
+ 
+
+
+

@@ -1,9 +1,33 @@
-.img{
-  display: flex; 
-  justify-content: center; 
-  align-items: center;
-  
+.img image { 
+ width:100%;
 }
-.pic{
-  border:5px solid skyblue;
+.line {
+  border: 1px solid gray;
+  opacity: 0.2;
+}
+.content{
+  border: 2px solid rgb(123,191,234);
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 15px;
+}
+.name{
+  color:black;
+  margin-left: 20px;
+  font-size: 22px;
+}
+.price{ 
+  color:#FF2727;
+  margin-left: 200px;
+  font-size: 25px;
+}
+.good{
+  display: flex;
+  border-bottom:1px solid #F6F6F6;
+}
+.detail{
+  border-bottom:1px solid #F6F6F6;
+  margin-top: 15px;
+  text-indent:2em;    
+  margin-bottom: 15px;
 }

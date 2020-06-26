@@ -12,7 +12,8 @@ Page({
     let password = this.data.password
     if (name == '') {
       wx: wx.showToast({
-        title: '请输入姓名'
+        title: '请输入姓名',
+        icon:'none'
       })
       return false
     }
