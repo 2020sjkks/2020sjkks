@@ -2,14 +2,16 @@
 <image src="{{img_path}}" mode='widthFix'></image>
 </view>
 <view class="good">
-  <view class='name'>干炒牛河</view>
-  <view class='price'>￥100</view>
+  <view class='name'>{{good_name}}</view>
+  <view class='price'>￥{{good_price}}</view>
 </view>
 <view class="detail">
   {{good_detail}}
 </view>
+<view class="detail">
+  {{comment}}
+</view>
 
-<view>{{good_id}}</view>
 
 
 
