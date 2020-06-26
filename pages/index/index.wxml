@@ -16,6 +16,6 @@
   </block>
 </view> 
 <view class='bottomview'>
-  <button class="cart" bindtap="goto_shooping_cart"> 查看购物车 </button>
+  <button class="cart" bindtap="goto_shooping_cart"> 下单 </button>
 </view>
-
+<view class="blank"></view>

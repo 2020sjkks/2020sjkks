@@ -3,7 +3,7 @@ Page({
     // 数据源
     goods:[
     ],
-    shopping_cart:{ //购物车商品 {菜品Aid:数量,菜品Bid:数量...}
+    shopping_cart:{     //购物车商品 {菜品Aid:数量,菜品Bid:数量...}
 
     }
   },
@@ -22,13 +22,12 @@ Page({
         })
         //创建选菜单表
         for (var item of res['data']) {
-          console.log(item);
+          //console.log(item);
           this.setData(
             {
               ['shopping_cart.'+item[0]]:0,
             })
-        }console.log(this.data.shopping_cart);
-      },
+        }},
     })
   },
   get_good_info:function(e){
@@ -47,7 +46,6 @@ Page({
     this.setData({
       ['shopping_cart.'+id]:num, //修改购物车中商品的数量
     });
-    console.log(this.data.shopping_cart);
   },
   minus_good:function(e){  //购物车删除菜品
     var id=parseInt(e.currentTarget.dataset.index);
@@ -58,11 +56,25 @@ Page({
     this.setData({
       ['shopping_cart.'+id]:num, //修改购物车中商品的数量
     });
-    console.log(this.data.shopping_cart);
+    //console.log(this.data.shopping_cart);
   },
   goto_shooping_cart:function(){
-    wx.navigateTo({ //字符串化选菜信息，传送到购物车页面
-      url: '/pages/shoppingcart/shoppingcart?shop='+JSON.stringify(this.data.shopping_cart),
+    //console.log(this.data.shopping_cart);
+    var selected=0;
+    for(let i in this.data.goods){ //检查是否有选择菜品
+      if(this.data.shopping_cart[this.data.goods[i][0]]!=0)selected=1;
+    }
+    if(selected==1)
+      wx.navigateTo({ //字符串化选菜信息，传送到购物车页面
+        url: '/pages/shoppingcart/shoppingcart?shop='+JSON.stringify(this.data.shopping_cart)
+        +"&goods="+JSON.stringify(this.data.goods),
+      })
+    else wx.showToast({
+      title: '请先选择菜品',
+      icon:'none'
     })
+  },
+  pay:function(){
+
   }
 })

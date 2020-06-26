@@ -19,7 +19,8 @@ Page({
     }
     else if ( password== '') {
       wx: wx.showToast({
-        title: '请输入密码'
+        title: '请输入密码',
+        icon:"none"
       })
       return false
     }
@@ -35,13 +36,15 @@ Page({
         console.log(res.data['state'])
         if(res.data['state']=='not_exist'){
           wx: wx.showToast({
-            title: '用户不存在'
+            title: '用户不存在',
+            icon:"none"
           })
           return false
         }
         else if(res.data['state']=='fail'){
           wx: wx.showToast({
-            title: '密码不正确'
+            title: '密码不正确',
+            icon:"none"
           })
           return false
         }
@@ -67,13 +70,15 @@ Page({
     let password = this.data.password
     if (name == '') {
       wx: wx.showToast({
-        title: '请输入姓名'
+        title: '请输入姓名',
+        icon:"none"
       })
       return false
     }
     else if ( password== '') {
       wx: wx.showToast({
-        title: '请输入密码'
+        title: '请输入密码',
+        icon:"none"
       })
       return false
     }
@@ -89,13 +94,15 @@ Page({
         console.log(res.data)
         if(res.data=='succeed'){
           wx: wx.showToast({
-            title: '成功请登录'
+            title: '成功请登录',
+            icon:"none"
           })
           return false
         }
         else if(res.data=='exist'){
           wx: wx.showToast({
-            title: '用户名存在'
+            title: '用户名存在',
+            icon:"none"
           })
           this.setData({
             name:'',

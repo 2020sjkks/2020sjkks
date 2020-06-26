@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .img image { 
  width:100%;
 }
@@ -31,3 +32,14 @@
   text-indent:2em;    
   margin-bottom: 15px;
 }
+=======
+.img{
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  
+}
+.pic{
+  border:5px solid skyblue;
+}
+>>>>>>> 767d231ae42b4843551b3ba3ce35dd3adce2b1c7
