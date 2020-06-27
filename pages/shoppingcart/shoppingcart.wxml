@@ -15,7 +15,6 @@
   </view>
   </block>
 </view> 
-<button class="pay" bindtap="pay"> 支付 </button>
-订单号为{{id}}
+<button class="pay" bindtap="{{buttonFunction}}" disabled="{{buttonDisable}}"> {{buttonContent}} </button>
 
 

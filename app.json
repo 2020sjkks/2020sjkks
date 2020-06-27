@@ -7,8 +7,8 @@
     "pages/good_info/good_info",
     "pages/shoppingcart/shoppingcart",
     "pages/set_phone/set_phone",
-    "pages/set_address/set_address"
-
+    "pages/set_address/set_address",
+    "pages/order_info/order_info"
   ],
   "window": {
     "backgroundTextStyle": "light",

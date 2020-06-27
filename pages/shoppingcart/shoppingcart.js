@@ -3,7 +3,10 @@ Page({
     selected:{},
     goods:[],
     id:'',
-    totalprice:0.0
+    totalprice:0.0,
+    buttonDisable:false,
+    buttonContent:"支付",
+    buttonFunction:'pay'
   },
   onLoad:function(options){
     this.setData({
@@ -27,14 +30,14 @@ Page({
     });
   },
   pay:function(){
+    this.setData({
+      buttonDisable:true
+    });
     var uid=getApp().globalData.uid;
     console.log(uid);
     wx.showLoading({
       title: '正在下单',
     });
-    setTimeout(function () {
-      wx.hideLoading();
-      }, 2000);
     //此处提交request
     wx.request({
       url: 'http://brucemarkdown.top:5000/order',
@@ -45,16 +48,25 @@ Page({
       },
       method:"POST",
       success: (res) => {
-        console.log(res);
-        if(res.data.result=='succeed'){
-          wx.showToast({
-            title: '下单成功',
-            icon:"none"
+          console.log(res);
+          if(res.data.result=='succeed'){
+            this.setData({
+              buttonContent:'查看订单'
+            })
+            wx.showToast({
+              title: '支付成功,订单号为'+res.data.id,
+              icon:"none"
+            });
+          this.setData({
+            id:res.data.id,  //成功返回订单id
+            buttonDisable:false,
+            buttonFunction:'goto_Order'
           });
-        this.setData({
-          id:res.data.id  //成功返回订单id
-        });
-        console.log(this.data.id);
+          console.log(this.data.id);
+          var pages = getCurrentPages()                //获取加载的页面( 页面栈 )
+      　　 //var currentPage = pages[pages.length - 1]  // 获取当前页面
+      　　 var prevPage = pages[pages.length - 2]       //获取上一个页面
+      　　 prevPage.onLoad();
         }
         else {
           console.log(res);
@@ -62,10 +74,17 @@ Page({
           wx.showToast({
             title: '下单失败',
             icon:"none"
-          })
+          });
+          this.setData({
+            buttonDisable:false
+          });
         }
       }
     })
-    
+  },
+  goto_Order:function(){
+    wx.navigateTo({ //跳转到订单详情
+      url: '/pages/order_info/order_info?oid='+this.data.id
+    })
   }
 })

@@ -1,0 +1,5 @@
+<!--pages/order_info/order_info.wxml-->
+<text>订单详情</text>
+<view>
+  <text>订单号：{{oid}}</text>
+</view>
