@@ -66,3 +66,14 @@
   font-size:15px;
   float: left;
 }
+.list_item{
+  margin-top:10px;
+  padding:10px;
+  height:80px;
+  border-bottom:1px solid #E8E8E8;
+}
+.totalprice{
+  font-size: 20px;
+  height: 20px;
+  color: rgb(233, 95, 95);
+}

@@ -22,7 +22,7 @@
 			"disablePlugins": [],
 			"outputPath": ""
 		},
-		"useCompilerModule": true,
+		"useCompilerModule": false,
 		"userConfirmedUseCompilerModuleSwitch": false
 	},
 	"compileType": "miniprogram",
@@ -88,13 +88,17 @@
 					"scene": null
 				},
 				{
-					"id": 4,
-					"name": "pages/order_info/order_info",
-					"pathName": "pages/order_info/order_info",
-					"query": "oid=78",
 					"id": -1,
 					"name": "pages/order/order",
 					"pathName": "pages/order/order",
+					"query": "oid=78",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/order",
+					"pathName": "pages/order_info/order_info",
+					"query": "oid=78",
 					"scene": null
 				}
 			]

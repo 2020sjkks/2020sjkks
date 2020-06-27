@@ -8,9 +8,6 @@ Page({
     oid:0,
     goods:[],
     totalprice:0.0,
-    buttonDisable:false,
-    buttonContent:"支付",
-    buttonFunction:'pay'
   },
   onLoad: function (options) {
     this.setData({
@@ -23,10 +20,11 @@ Page({
       },
       method:"POST",
       success: (res) => {
-          console.log(res.data);
+          console.log(res.data.data);
           if(res.data.result=='succeed'){
             this.setData({
-              goods:res.data.data
+              goods:res.data.data,
+              totalprice:res.data.data[0][5]
             })
         }
         else {
