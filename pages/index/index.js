@@ -74,8 +74,5 @@ Page({
       title: '请先选择菜品',
       icon:'none'
     })
-  },
-  pay:function(){
-
   }
 })

@@ -58,13 +58,7 @@
   height: 27px;
 }
 
-.refresh{
-  margin-top: 10px;
-  margin-bottom: 10px;
-  background-color: rgb(123,191,234);
-  color: white;
-  border-radius: 20px; 
-}
+
 .bottomview{
   position: fixed;
   bottom: 0;

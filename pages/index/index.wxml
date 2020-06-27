@@ -1,4 +1,3 @@
-<button bindtap="getGoods" class="refresh">刷新界面</button>
 <view class='list'>
   <block  wx:for="{{goods}}" wx:key="index">
   <view class='list_item'>

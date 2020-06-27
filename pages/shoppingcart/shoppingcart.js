@@ -3,7 +3,7 @@ Page({
     selected:{},
     goods:[],
     id:'',
-    totalprice:0.0,
+    totalprice:'',
     buttonDisable:false,
     buttonContent:"支付",
     buttonFunction:'pay'
@@ -26,7 +26,7 @@ Page({
     }
     this.setData({
         goods:selectedgoods.reverse(),
-        totalprice:totalprice
+        totalprice:totalprice.toString()+'元' 
     });
   },
   pay:function(){
@@ -51,7 +51,8 @@ Page({
           console.log(res);
           if(res.data.result=='succeed'){
             this.setData({
-              buttonContent:'查看订单'
+              buttonContent:'查看订单',
+              totalprice:""
             })
             wx.showToast({
               title: '支付成功,订单号为'+res.data.id,

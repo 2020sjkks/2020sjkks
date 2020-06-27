@@ -84,6 +84,14 @@
 					"id": -1,
 					"name": "pages/set_address/set_address",
 					"pathName": "pages/set_address/set_address",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "pages/order_info/order_info",
+					"pathName": "pages/order_info/order_info",
+					"query": "oid=78",
 					"scene": null
 				}
 			]

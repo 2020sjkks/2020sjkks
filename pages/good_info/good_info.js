@@ -30,7 +30,7 @@ Page({
           good_detail:res.data.info[0][2],
           good_price:res.data.info[0][4],
           img_path:"http://brucemarkdown.top:5000/image/"+res.data.info[0][3]+'.jpg',
-          comment:res.data.comment
+          comment:res.data.comment[0]
         })
       }
 })

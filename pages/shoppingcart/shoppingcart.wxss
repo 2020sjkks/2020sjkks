@@ -51,20 +51,7 @@
   margin-top:10px;
   font-size:15px;
 }
-.list .list_item .info .add{
-  margin-left:160px;
-  margin-top:0px;
-  width: 27px;
-  height: 27px;
-  float: right;
-}
-.list .list_item .info .minus{
-  margin-left:150px;
-  float: left;
-  margin-top: -27px;
-  width: 27px;
-  height: 27px;
-}
+
 .pay{
   background-color: rgb(123,191,234);
   width: 10px;

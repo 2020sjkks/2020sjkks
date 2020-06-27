@@ -5,16 +5,40 @@ Page({
    * 页面的初始数据
    */
   data: {
-    oid:0
+    oid:0,
+    goods:[],
+    totalprice:0.0,
+    buttonDisable:false,
+    buttonContent:"支付",
+    buttonFunction:'pay'
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
     this.setData({
       oid:options.oid
     })
+    wx.request({
+      url: 'http://brucemarkdown.top:5000/orderinfo',
+      data: { 
+        oid:this.data.oid,
+      },
+      method:"POST",
+      success: (res) => {
+          console.log(res.data);
+          if(res.data.result=='succeed'){
+            this.setData({
+              goods:res.data.data
+            })
+        }
+        else {
+          console.log(res);
+          wx.hideLoading();
+          wx.showToast({
+            title: '查询失败',
+            icon:"none"
+          });
+        }
+      }
+    });
   },
 
   /**
