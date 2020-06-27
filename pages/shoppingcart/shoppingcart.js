@@ -26,7 +26,8 @@ Page({
     }
     this.setData({
         goods:selectedgoods.reverse(),
-        totalprice:totalprice.toString()+'元' 
+        totalprice:totalprice,
+        buttonContent:this.data.buttonContent+totalprice.toString()+'元' 
     });
   },
   pay:function(){
