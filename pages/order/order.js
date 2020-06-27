@@ -5,16 +5,45 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    uid:null,
+    order_data:[],
+    _data:[{oid:1,uid:2,accept:1,price:20,date:'2020 0627 1642'},
+            {oid:1,uid:2,accept:1,price:20,date:'2020 0627 1642'},
+            {oid:1,uid:2,accept:1,price:20,date:'2020 0627 1642'},
+            {oid:1,uid:2,accept:1,price:20,date:'2020 0627 1642'},]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var app=getApp()
+    this.setData({
+      uid:app.globalData.uid
+    })
+    this.get_user_order()
   },
-
+  get_user_order:function(){
+    wx.request({
+      url: 'http://brucemarkdown.top:5000/get_user_order',
+      data: {
+        uid:this.data.uid
+      },
+      method:"POST",
+      success:(res)=>{
+        console.log(res.data)
+        this.setData({
+          order_data:res.data
+        })
+      }
+    })
+  },
+  goto_order:function(e){
+    var index=parseInt(e.currentTarget.dataset.index);
+    wx.navigateTo({ //跳转到订单详情
+      url: '/pages/order_info/order_info?oid='+this.data.order_data[index][0]
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -28,12 +57,10 @@ Page({
   onShow: function () {
 
   },
-
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-
   },
 
   /**
