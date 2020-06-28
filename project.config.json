@@ -100,6 +100,13 @@
 					"pathName": "pages/order_info/order_info",
 					"query": "oid=78",
 					"scene": null
+				},
+				{
+					"id": 6,
+					"name": "pages/order_info/order_info",
+					"pathName": "pages/order_info/order_info",
+					"query": "oid=1",
+					"scene": null
 				}
 			]
 		}
