@@ -20,7 +20,7 @@
     <view class='info'>
       <view class='title' data-index="{{index}}" >{{item[0]}}</view> 
       <view class="price">￥{{item[2]}}</view>
-      <button class="comment">评价</button> 
+      <button class="comment" data-index="{{index}}" bindtap="goto_comment">评价</button> 
       <view class='selected' >x {{item[3]}} 份</view> 
     </view>
   </view>

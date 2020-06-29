@@ -1,114 +1,113 @@
-{
-    "description": "项目配置文件",
-    "packOptions": {
-        "ignore": []
-    },
-    "setting": {
-        "urlCheck": false,
-        "es6": true,
-        "postcss": true,
-        "preloadBackgroundData": false,
-        "minified": true,
-        "newFeature": true,
-        "coverView": true,
-        "autoAudits": false,
-        "showShadowRootInWxmlPanel": true,
-        "scopeDataCheck": false,
-        "checkInvalidKey": true,
-        "checkSiteMap": true,
-        "uploadWithSourceMap": true,
-        "babelSetting": {
-            "ignore": [],
-            "disablePlugins": [],
-            "outputPath": ""
-        },
-        "useCompilerModule": true,
-        "userConfirmedUseCompilerModuleSwitch": false
-    },
-    "compileType": "miniprogram",
-    "libVersion": "2.11.2",
-    "appid": "wxbcddf9424925a086",
-    "projectname": "wx3",
-    "debugOptions": {
-        "hidedInDevtools": []
-    },
-    "isGameTourist": false,
-    "simulatorType": "wechat",
-    "simulatorPluginLibVersion": {},
-    "condition": {
-        "search": {
-            "current": -1,
-            "list": []
-        },
-        "conversation": {
-            "current": -1,
-            "list": []
-        },
-        "plugin": {
-            "current": -1,
-            "list": []
-        },
-        "game": {
-            "currentL": -1,
-            "list": []
-        },
-        "gamePlugin": {
-            "current": -1,
-            "list": []
-        },
-        "miniprogram": {
-            "current": -1,
-            "list": [
-                {
-                    "id": -1,
-                    "name": "pages/index/index",
-                    "pathName": "pages/index/index",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "id": -1,
-                    "name": "pages/user/user",
-                    "pathName": "pages/user/user",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "id": -1,
-                    "name": "pages/set_phone/set_phone",
-                    "pathName": "pages/set_phone/set_phone",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "id": -1,
-                    "name": "pages/set_address/set_address",
-                    "pathName": "pages/set_address/set_address",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "id": -1,
-                    "name": "pages/order/order",
-                    "pathName": "pages/order/order",
-                    "query": "oid=78",
-                    "scene": null
-                },
-                {
-                    "id": -1,
-                    "name": "pages/order/order",
-                    "pathName": "pages/order_info/order_info",
-                    "query": "oid=78",
-                    "scene": null
-                },
-                {
-                    "id": 6,
-                    "name": "pages/order_info/order_info",
-                    "pathName": "pages/order_info/order_info",
-                    "query": "oid=1",
-                    "scene": null
-                }
-            ]
-        }
-    }
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"preloadBackgroundData": false,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"useCompilerModule": true,
+		"userConfirmedUseCompilerModuleSwitch": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.11.2",
+	"appid": "wxbcddf9424925a086",
+	"projectname": "wx3",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/user/user",
+					"pathName": "pages/user/user",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/set_phone/set_phone",
+					"pathName": "pages/set_phone/set_phone",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/set_address/set_address",
+					"pathName": "pages/set_address/set_address",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/order",
+					"pathName": "pages/order/order",
+					"query": "oid=78",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/order",
+					"pathName": "pages/order_info/order_info",
+					"query": "oid=78",
+					"scene": null
+				},
+				{
+					"id": 6,
+					"name": "pages/order_info/order_info",
+					"pathName": "pages/order_info/order_info",
+					"query": "oid=1",
+					"scene": null
+				}
+			]
+		}
+	}
 }
