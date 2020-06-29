@@ -1,6 +1,14 @@
 
 <text class="shoopingcart_title">支付清单</text>
 <view class='divideline'></view>
+<view class="list_item">
+  <view>
+    <text>手机号码：{{phone}}\t</text><text class="edit" bindtap="editPhone" >修改</text>
+  </view>
+  <view>
+    <text>配送地址：{{address}}\t</text><text class="edit" bindtap="editPhone" >修改</text>
+  </view>
+</view>
 <view class='list'>
   <block  wx:for="{{goods}}" wx:key="index">
   <view class='list_item'>

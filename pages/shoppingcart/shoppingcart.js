@@ -4,6 +4,8 @@ Page({
     goods:[],
     id:'',
     totalprice:'',
+    address:'',
+    phone:'',
     buttonDisable:false,
     buttonContent:"支付",
     buttonFunction:'pay'
@@ -27,7 +29,19 @@ Page({
     this.setData({
         goods:selectedgoods.reverse(),
         totalprice:totalprice,
-        buttonContent:this.data.buttonContent+totalprice.toString()+'元' 
+        buttonContent:this.data.buttonContent+totalprice.toString()+'元' ,
+        address:getApp().globalData.uaddress,
+        phone:getApp().globalData.uphone,
+    });
+  },
+  editPhone:function(){
+    wx.navigateTo({
+      url: '/pages/set_phone/set_phone',
+    });
+  },
+  editAddress:function(){
+    wx.navigateTo({
+      url: '/pages/set_address/set_address',
     });
   },
   pay:function(){
@@ -87,6 +101,12 @@ Page({
   goto_Order:function(){
     wx.navigateTo({ //跳转到订单详情
       url: '/pages/order_info/order_info?oid='+this.data.id
+    })
+  },
+  onShow(){
+    this.setData({
+      address:getApp().globalData.uaddress,
+      phone:getApp().globalData.uphone,
     })
   }
 })
