@@ -7,6 +7,8 @@
   <view>
     <text>订单时间：{{goods[0][4]}}</text>
   </view>
+  <image class='accepted' wx:if='{{accepted==1}}' src='/imgs/finish.png'></image>
+  <image class='accepted' wx:if='{{accepted==0}}' src='/imgs/unfinish.png'></image>
 </view>
 <view class='divideline'></view>
 <view class='list'>

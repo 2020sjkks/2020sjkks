@@ -7,7 +7,6 @@ Page({
     uphone:null,
     uid:null,
     input:''
-
   },
 
   /**

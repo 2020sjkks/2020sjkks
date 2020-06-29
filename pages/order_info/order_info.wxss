@@ -76,3 +76,11 @@
   height: 20px;
   color: rgb(233, 95, 95);
 }
+.list_item .accepted{
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-top: -200rpx;
+  margin-left: 530rpx;
+  position: absolute
+}
