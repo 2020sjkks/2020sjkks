@@ -38,7 +38,12 @@ Page({
       }
     });
   },
-
+  goto_comment:function(e){
+    var index=parseInt(e.currentTarget.dataset.index);
+    wx.navigateTo({ //跳转到订单详情
+      url: '/pages/comment/comment?gid='+this.data.order_data[index][7]+'&oid='+this.data.oid
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
