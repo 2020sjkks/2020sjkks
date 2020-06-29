@@ -2,7 +2,8 @@
 .shoopingcart_title{
   font-size: 25px;
   color: black;
-  text-shadow:1px 1px 1px #cccccc
+  text-shadow:1px 1px 1px #cccccc;
+  margin-left: 10px;
 }
 .divideline{
   margin-top: 10px;

@@ -2,7 +2,7 @@
   font-size: 25px;
   color: black;
   text-shadow:1px 1px 1px #cccccc;
-  margin-left: 30px;
+  margin-left: 10px;
 }
 .divideline{
   margin-top: 10px;
@@ -68,13 +68,15 @@
 .list_item{
   margin-top:10px;
   padding:10px;
-  height:80px;
+  height:120px;
   border-bottom:1px solid #E8E8E8;
 }
 .totalprice{
   font-size: 20px;
   height: 20px;
   color: rgb(233, 95, 95);
+  font-weight: 700;
+  margin-left: 10px;
 }
 .list_item .accepted{
   width: 90px;

@@ -9,6 +9,12 @@
   </view>
   <image class='accepted' wx:if='{{accepted==1}}' src='/imgs/finish.png'></image>
   <image class='accepted' wx:if='{{accepted==0}}' src='/imgs/unfinish.png'></image>
+  <view>
+    <text>手机号码：{{phone}}</text>
+  </view>
+  <view>
+    <text>配送地址：{{address}}</text>
+  </view>
 </view>
 <view class='divideline'></view>
 <view class='list'>

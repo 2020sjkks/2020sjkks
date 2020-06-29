@@ -8,9 +8,11 @@ Page({
     oid:0,
     goods:[],
     totalprice:0.0,
-    accepted:0
+    accepted:0,
+    address:'',
+    phone:''
   },
-  onLoad: function (options) {
+  onLoad: function (options) { 
     this.setData({
       oid:options.oid
     })
@@ -27,6 +29,8 @@ Page({
               goods:res.data.data,
               totalprice:res.data.data[0][5],
               accepted:res.data.data[0][6],
+              phone:res.data.data[0][8],
+              address:res.data.data[0][9],
             })
         }
         else {

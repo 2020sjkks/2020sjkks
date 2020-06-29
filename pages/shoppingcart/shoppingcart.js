@@ -4,7 +4,7 @@ Page({
     goods:[],
     id:'',
     totalprice:'',
-    address:'',
+    address:'', 
     phone:'',
     buttonDisable:false,
     buttonContent:"支付",
@@ -59,7 +59,9 @@ Page({
       data: { 
         uid:uid,
         goods:this.data.selected,  //菜品信息
-        totalprice:this.data.totalprice
+        totalprice:this.data.totalprice,
+        phone:this.data.phone,
+        address:this.data.address
       },
       method:"POST",
       success: (res) => {
