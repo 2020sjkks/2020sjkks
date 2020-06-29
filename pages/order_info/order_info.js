@@ -45,9 +45,9 @@ Page({
     });
   },
   goto_comment:function(e){
-    var index=parseInt(e.currentTarget.dataset.index);
+    var index=parseInt(e.currentTarget.dataset.index)
     wx.navigateTo({ //跳转到订单详情
-      url: '/pages/comment/comment?gid='+this.data.order_data[index][7]+'&oid='+this.data.oid
+      url: '/pages/comment/comment?gid='+this.data.goods[index][7]+'&oid='+this.data.oid
     })
   },
   /**
