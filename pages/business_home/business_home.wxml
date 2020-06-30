@@ -1,2 +1,3 @@
-<button class="btn">接单</button>
+<button class="btn" bindtap="new_order">接单</button>
 <button class='btn'>菜品</button>
+<button class='btn' bindtap="exit">退出</button>

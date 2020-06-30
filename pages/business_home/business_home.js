@@ -1,20 +1,26 @@
 // pages/business_home/business_home.js
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
 
   },
-
+  new_order:function(){
+    wx.navigateTo({
+      url: '/pages/new_order/new_order',
+    })
+  },
+  exit:function(){
+    wx.reLaunch({
+      url: '/pages/login/login',
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

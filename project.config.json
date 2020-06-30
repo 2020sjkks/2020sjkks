@@ -107,6 +107,12 @@
 					"pathName": "pages/order_info/order_info",
 					"query": "oid=1",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/new_order/new_order",
+					"pathName": "pages/new_order/new_order",
+					"scene": null
 				}
 			]
 		}
