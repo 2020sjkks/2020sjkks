@@ -1,2 +1,2 @@
 <button class="btn">接单</button>
-<button class='btn'>菜品</button>
+<button class='btn' bindtap='editGood' >菜品</button>

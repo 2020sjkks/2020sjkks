@@ -10,7 +10,8 @@
     "pages/set_address/set_address",
     "pages/order_info/order_info",
     "pages/comment/comment",
-    "pages/business_home/business_home"
+    "pages/business_home/business_home",
+    "pages/business_good/business_good"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,0 +1,19 @@
+<text class="title">菜品编辑</text>
+<view class='img'>
+<image src="{{img_path}}" mode='widthFix' ></image>
+</view>
+<view class="good">
+  <input class='name' model:value='{{good_name}}'></input>
+  <view class="price">￥<input class="num" model:value='{{good_price}}'></input></view>
+  
+</view>
+<textarea class="detail" model:value='{{good_detail}}'></textarea>
+<button class="btn" bindtap="finish">完成</button>
+
+
+
+
+ 
+
+
+

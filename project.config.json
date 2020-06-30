@@ -107,6 +107,13 @@
 					"pathName": "pages/order_info/order_info",
 					"query": "oid=1",
 					"scene": null
+				},
+				{
+					"id": 7,
+					"name": "pages/business_home/business_home",
+					"pathName": "pages/business_good/business_good",
+					"query": "",
+					"scene": null
 				}
 			]
 		}

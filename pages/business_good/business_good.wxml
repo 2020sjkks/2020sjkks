@@ -1,0 +1,19 @@
+<!--pages/business_good/business_good.wxml-->
+<text class="title">菜品</text>
+<view class='list'>
+  <block  wx:for="{{goods}}" wx:key="index">
+  <view class='list_item'>
+    <view class='img'>
+      <image src="http://brucemarkdown.top:5000/image/{{item[2]}}.jpg" data-index="{{index}}" bindtap="get_good_info" ></image>
+    </view>
+    <view class='info'>
+      <view class='title' data-index="{{index}}" bindtap="get_good_info">{{item[1]}}</view> 
+      <view class="price">￥{{item[3]}}</view>
+      <button class="edit" data-index="{{index}}" bindtap="editGood">编辑</button> 
+      <button class="delete" data-index="{{index}}" bindtap="get_good_info">删除</button> 
+    </view>
+  </view>
+  </block>
+</view> 
+<button class="btn" bindtap="newGood">添加商品</button>
+<view class="blank"></view>
