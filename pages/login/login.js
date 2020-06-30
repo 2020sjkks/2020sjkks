@@ -24,6 +24,12 @@ Page({
       })
       return false
     }
+    else if (name=='管理员' && password=='12345'){
+      console.log('!!!!!!!')
+      wx.redirectTo({
+        url: '/pages/business_home/business_home'
+      })
+    }
     else{
       wx.request({
       url: 'http://brucemarkdown.top:5000/login',
@@ -79,6 +85,17 @@ Page({
       wx: wx.showToast({
         title: '请输入密码',
         icon:"none"
+      })
+      return false
+    }
+    else if (name=='管理员'){
+      wx: wx.showToast({
+        title: '用户名存在',
+        icon:"none"
+      })
+      this.setData({
+        name:'',
+        password:'',
       })
       return false
     }

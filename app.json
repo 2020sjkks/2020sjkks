@@ -9,7 +9,8 @@
     "pages/set_phone/set_phone",
     "pages/set_address/set_address",
     "pages/order_info/order_info",
-    "pages/comment/comment"
+    "pages/comment/comment",
+    "pages/business_home/business_home"
   ],
   "window": {
     "backgroundTextStyle": "light",
