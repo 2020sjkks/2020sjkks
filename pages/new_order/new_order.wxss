@@ -1,0 +1,67 @@
+page{
+  background: #F6F6F6;
+}
+.order_list{
+  background: #fff;
+  width: 95%;
+  position: relative;
+  margin: 10px 10px 10px 10px;
+}
+.order_list .money{
+  border-bottom: 1px solid #f2f2f2;
+  padding:  40rpx 20rpx 20rpx 40rpx;
+}
+.order_list .money text{
+  color: #666;
+  font-size: 17px;
+  float: right;
+  line-height: 10rpx;
+  margin-right: 20rpx;
+}
+.order_list .detail{
+  margin-top: 20px;
+  margin-left: 30rpx;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+.order_list .detail text{
+  margin-right: 30rpx;
+  font-size: 35rpx;
+  color:#FF2727;
+}
+.order_list image{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-top: 40rpx;
+  margin-left: 530rpx;
+  position: absolute
+}
+.division{
+  width: 100%;
+  height: 1px;
+  background: #f2f2f2;
+  margin-top: 70rpx;
+}
+.btn1{
+  background: #fff;
+  color: #7bbfea;
+  border-radius: 10rpx;
+  margin-top: 20rpx;
+  font-size: 30rpx;
+  width: 100rpx;
+  height: 50rpx;
+  display:flex; 
+  justify-content:center; 
+  align-items:center;
+  border: 1px solid #7bbfea;
+}
+.page_row{
+  display: flex;
+}
+.division2{
+  width: 100%;
+  height: 20rpx;
+  background: #f2f2f2;
+  margin-top: 20rpx;
+}

@@ -113,6 +113,11 @@
 					"name": "pages/business_home/business_home",
 					"pathName": "pages/business_good/business_good",
 					"query": "",
+				},
+				{
+					"id": -1,
+					"name": "pages/new_order/new_order",
+					"pathName": "pages/new_order/new_order",
 					"scene": null
 				}
 			]

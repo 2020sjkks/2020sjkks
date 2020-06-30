@@ -1,2 +1,8 @@
+<<<<<<< HEAD
 <button class="btn">接单</button>
 <button class='btn' bindtap='editGood' >菜品</button>
+=======
+<button class="btn" bindtap="new_order">接单</button>
+<button class='btn'>菜品</button>
+<button class='btn' bindtap="exit">退出</button>
+>>>>>>> c7004cb0b464e624a4a83190d53a5f6bf9f62958
