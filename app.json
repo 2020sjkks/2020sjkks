@@ -11,11 +11,8 @@
     "pages/order_info/order_info",
     "pages/comment/comment",
     "pages/business_home/business_home",
-<<<<<<< HEAD
-    "pages/business_good/business_good"
-=======
+    "pages/business_good/business_good",
     "pages/new_order/new_order"
->>>>>>> c7004cb0b464e624a4a83190d53a5f6bf9f62958
   ],
   "window": {
     "backgroundTextStyle": "light",
