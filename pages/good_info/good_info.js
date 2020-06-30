@@ -25,6 +25,7 @@ Page({
         good_id:this.data.good_id,
       },
       success: (res)=>{
+        console.log(res.data.comment)
         this.setData({
           good_name:res.data.info[0][1],
           good_detail:res.data.info[0][2],
