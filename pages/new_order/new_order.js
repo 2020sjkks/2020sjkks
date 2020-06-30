@@ -13,12 +13,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
-    var that = this;
-    interval = setInterval(function() {
-      that.get_unaccepted_order()
-      console.log("10 secs")
-    }, 6000)
+    this.get_unaccepted_order();
   },
   get_unaccepted_order(){
     wx.request({
@@ -68,7 +63,11 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    var that = this;
+    interval = setInterval(function() {
+      that.get_unaccepted_order()
+      console.log("10 secs")
+    }, 10000)
   },
 
   /**
@@ -89,7 +88,6 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
   },
 
   /**
