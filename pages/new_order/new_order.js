@@ -6,7 +6,11 @@ Page({
    * 页面的初始数据
    */
   data: {
-    order_data:[]
+    unaccepted_order:[],
+    all_order:[],
+    navbar: ['待完成', '所有订单'],
+    currentTab: 0,
+    index: 0,
   },
 
   /**
@@ -14,6 +18,7 @@ Page({
    */
   onLoad: function (options) {
     this.get_unaccepted_order();
+    this.get_all_order()
   },
   get_unaccepted_order(){
     wx.request({
@@ -21,15 +26,33 @@ Page({
       success:(res)=>{
         console.log(res.data)
         this.setData({
-          order_data:res.data
+          unaccepted_order:res.data
         })
       }
     })
   },
   goto_order:function(e){
     var index=parseInt(e.currentTarget.dataset.index);
+    console.log(index)
     wx.navigateTo({ //跳转到订单详情
-      url: '/pages/order_info/order_info?oid='+this.data.order_data[index][0]
+      url: '/pages/order_info/order_info?oid='+this.data.unaccepted_order[index][0]
+    })
+  },
+  goto_order2:function(e){
+    var index=parseInt(e.currentTarget.dataset.index);
+    console.log(index)
+    wx.navigateTo({ //跳转到订单详情
+      url: '/pages/order_info/order_info?oid='+this.data.all_order[index][0]
+    })
+  },
+  get_all_order(){
+    wx.request({
+      url: 'http://brucemarkdown.top:5000/get_all_order',
+      success:(res)=>{
+        this.setData({
+          all_order:res.data
+        })
+      }
     })
   },
 
@@ -38,7 +61,7 @@ Page({
     wx.request({
       url: 'http://brucemarkdown.top:5000/accept_order',
       data:{
-        oid:this.data.order_data[index][0]
+        oid:this.data.unaccepted_order[index][0]
       },
       method:'POST',
       success:(res)=>{
@@ -68,6 +91,11 @@ Page({
       that.get_unaccepted_order()
       console.log("10 secs")
     }, 10000)
+  },
+  navbarTap: function(e) {
+    this.setData({
+      currentTab: e.currentTarget.dataset.idx
+    })
   },
 
   /**

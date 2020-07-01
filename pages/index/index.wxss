@@ -1,6 +1,12 @@
-
+page{
+  background: #F6F6F6;
+}
 .list{
   margin-top:10px;
+  background: #fff;
+  width: 95%;
+  position: relative;
+  margin: 10px 10px 10px 10px;
 }
 
 .list .list_item{
@@ -34,26 +40,26 @@
 .list .list_item .info .selected{
   color:#333;
   margin-left:135px;
-  margin-top: -35px;
+  margin-top: -60px;
   font-size: 15px;
 }
 .list .list_item .info .price{
   color:#FF2727;
   margin-left:10px;
   margin-top:10px;
-  font-size:15px;
+  font-size:20px;
 }
 .list .list_item .info .add{
-  margin-left:160px;
-  margin-top:0px;
+  margin-top:-20px;
+  margin-right: 10px;
   width: 27px;
   height: 27px;
   float: right;
 }
 .list .list_item .info .minus{
-  margin-left:150px;
+  margin-left:120px;
   float: left;
-  margin-top: -27px;
+  margin-top: -20px;
   width: 27px;
   height: 27px;
 }
