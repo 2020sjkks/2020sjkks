@@ -5,11 +5,16 @@
   <view class='name'>{{good_name}}</view>
   <view class='price'>￥{{good_price}}</view>
 </view>
-<view class="detail">
+<view class="good">
+<view class="detail">商品详情
   {{good_detail}}
 </view>
-<view class="detail">
-  {{comment}}
+</view>
+商品评价：
+<view class='list'>
+  <block wx:for="{{comment}}" wx:key="index">
+    <view class='list_item'>{{item}}</view> 
+  </block>
 </view>
 
 
