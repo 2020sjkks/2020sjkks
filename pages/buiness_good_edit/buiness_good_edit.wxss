@@ -50,7 +50,6 @@
   display: flex; 
   justify-content: center; 
   align-items: center;
-  
 }
 .pic{
   border:5px solid skyblue;
@@ -67,4 +66,10 @@
   justify-content:center; 
   align-items:center;
   border: 1px solid #7bbfea;
+}
+.blank{
+  height: 50px;
+}
+.blank1{
+  height: 10px;
 }

@@ -34,7 +34,7 @@ Page({
   get_good_info:function(e){
     var index=parseInt(e.currentTarget.dataset.index);
     wx.navigateTo({  //提交参数到商品明细页：商品id
-      url: '/pages/good_info/good_info?good_id='+this.data.goods[index][2]
+      url: '/pages/good_info/good_info?good_id='+this.data.goods[index][0]
     })
   },
   add_good:function(e){  //菜品添加到购物车

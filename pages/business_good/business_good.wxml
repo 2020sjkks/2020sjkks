@@ -10,7 +10,7 @@
       <view class='title' data-index="{{index}}" bindtap="get_good_info">{{item[1]}}</view> 
       <view class="price">￥{{item[3]}}</view>
       <button class="edit" data-index="{{index}}" bindtap="editGood">编辑</button> 
-      <button class="delete" data-index="{{index}}" bindtap="get_good_info">删除</button> 
+      <button class="delete" data-index="{{index}}" bindtap="askdelete">删除</button> 
     </view>
   </view>
   </block>

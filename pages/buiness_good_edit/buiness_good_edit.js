@@ -5,21 +5,24 @@ Page({
     good_detail:'商品详情',
     good_price:'0.0',
     img_path:'',
-  },
-  con:function(){
-    console.log(this.data.good_id)
+    good_photo:'-1',
+    title:'菜品编辑'
   },
   onLoad:function(options){
+    console.log(options)
     if(options.good_id==undefined){
-      console.log("创建商品");
+      this.setData({
+        img_path:"/imgs/photo.png",
+        title:"菜品添加"
+      });
     }
     else{
+      console.log("编辑商品"+options.good_id);
       this.setData({
         good_id:options.good_id,
         //img_path:"http://brucemarkdown.top:5000/image/"+options.img+'.jpg'
       });
       this.get_goodinfo();
-      console.log("编辑商品")
     }
   },
   get_goodinfo(){
@@ -36,11 +39,67 @@ Page({
           good_detail:res.data.info[0][2],
           good_price:res.data.info[0][4],
           img_path:"http://brucemarkdown.top:5000/image/"+res.data.info[0][3]+'.jpg',
+          gphoto:res.data.info[0][3]
         })
       }
   })
   },
   finish:function(){ //完成修改
+    if(this.data.good_id==null){//添加商品
+      wx.request({
+        url: 'http://brucemarkdown.top:5000/add_good',
+        method:'POST',
+        data: {
+          gname:this.data.good_name,
+          gdetail:this.data.good_detail,
+          gprice:this.data.good_price,
+          gphoto:this.data.good_photo
+        },
+        success: (res)=>{
+          if(res.data.state=='succeed'){
+            wx.showToast({
+              title: '添加成功,商品号为'+res.data.gid,
+              icon:"none"
+            });
+          }
+          else{
+            wx.showToast({
+              title: '添加失败',
+              icon:'none'
+            });
+          }
+        }
+      })
+    }
+    else { //修改商品
+      console.log("提交修改");
+      wx.request({
+        url: 'http://brucemarkdown.top:5000/edit_good',
+        method:'POST',
+        data: {
+          gid:this.data.good_id,
+          gname:this.data.good_name,
+          gdetail:this.data.good_detail,
+          gprice:this.data.good_price,
+          gphoto:this.data.good_photo
+        },
+        success: (res)=>{
+          if(res.data=='succeed'){
+            wx.showToast({
+              title: '修改成功',
+            });
+          }
+          else{
+            wx.showToast({
+              title: '修改失败',
+              icon:'none'
+            });
+          }
+        }
+      })
+      
+    }
+  },
 
-  }
+
 })
