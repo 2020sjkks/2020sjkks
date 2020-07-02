@@ -5,7 +5,8 @@ Page({
     good_detail:null,
     good_price:null,
     img_path:null,
-    comment:[]
+    comment:[],
+    sales:null
   },
   con:function(){
     console.log(this.data.comment)
@@ -13,6 +14,7 @@ Page({
   onLoad:function(options){
     this.setData({
       good_id:options.good_id,
+      sales:options.sales
       //img_path:"http://brucemarkdown.top:5000/image/"+options.img+'.jpg'
     });
     this.get_goodinfo()

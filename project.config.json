@@ -118,6 +118,7 @@
 					"id": -1,
 					"name": "pages/new_order/new_order",
 					"pathName": "pages/new_order/new_order",
+					"query": "",
 					"scene": null
 				}
 			]

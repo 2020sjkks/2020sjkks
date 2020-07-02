@@ -1,3 +1,5 @@
+<view class="back">
 <button class='btn' bindtap='editGood' >菜品</button>
 <button class="btn" bindtap="new_order">订单</button>
 <button class='btn' bindtap="exit">退出</button>
+</view>

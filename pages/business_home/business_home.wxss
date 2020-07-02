@@ -1,13 +1,16 @@
+page{
+  background: #F6F6F6;
+}
 .btn{
   background: #fff;
   color: #7bbfea;
   border-radius: 10rpx;
-  margin-top: 20rpx;
-  font-size: 30rpx;
-  width: 200rpx;
-  height: 50rpx;
+  margin-top: 70rpx;
+  font-size: 50rpx;
+  width: 250rpx;
+  height: 150rpx;
   display:flex; 
   justify-content:center; 
   align-items:center;
-  border: 1px solid #7bbfea;
+  border: 8px solid #7bbfea;
 }
