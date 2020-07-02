@@ -33,14 +33,14 @@ Page({
   },
   newGood:function(){
     wx.navigateTo({
-      url: '/pages/buiness_good_edit/buiness_good_edit',
+      url: '/pages/business_good_edit/business_good_edit',
     })
   },
   editGood:function(e){
     var index=parseInt(e.currentTarget.dataset.index);
     //console.log(this.data.goods[index][0]);
     wx.navigateTo({
-      url: '/pages/buiness_good_edit/buiness_good_edit?good_id='+this.data.goods[index][0],
+      url: '/pages/business_good_edit/business_good_edit?good_id='+this.data.goods[index][0],
     })
   },
   askdelete:function(e){

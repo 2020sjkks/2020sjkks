@@ -12,7 +12,8 @@
     "pages/comment/comment",
     "pages/business_home/business_home",
     "pages/business_good/business_good",
-    "pages/new_order/new_order"
+    "pages/new_order/new_order",
+    "pages/business_good_edit/business_good_edit"
   ],
   "window": {
     "backgroundTextStyle": "light",
