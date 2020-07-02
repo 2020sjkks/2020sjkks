@@ -1,10 +1,9 @@
-<!--pages/business_good/business_good.wxml-->
 <text class="title">菜品</text>
 <view class='list'>
   <block  wx:for="{{goods}}" wx:key="index">
   <view class='list_item'>
     <view class='img'>
-      <image src="http://brucemarkdown.top:5000/image/{{item[2]}}.jpg" data-index="{{index}}" bindtap="get_good_info" ></image>
+      <image src="http://brucemarkdown.top:5000/image/{{item[2]}}.jpg?{{random}}" data-index="{{index}}" bindtap="get_good_info" ></image>
     </view>
     <view class='info'>
       <view class='title' data-index="{{index}}" bindtap="get_good_info">{{item[1]}}</view> 

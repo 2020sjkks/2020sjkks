@@ -1,13 +1,12 @@
 
 <view class='img'>
-<image src="{{img_path}}" mode='widthFix' ></image>
+<image src="{{img_path}}" mode='widthFix' bindtap="choosePhoto"></image>
 </view>
 <text class="title">{{title}}</text>
 <view class="blank1"></view>
 <view class="good">
   <input class='name' model:value='{{good_name}}'></input>
   <view class="price">￥<input class="num" model:value='{{good_price}}'></input></view>
-  
 </view>
 <textarea class="detail" model:value='{{good_detail}}'></textarea>
 <button class="btn" bindtap="finish">完成</button>

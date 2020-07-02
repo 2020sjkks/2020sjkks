@@ -3,10 +3,14 @@ Page({
     // 数据源
     goods:[//0:gid,1:gname,2:gphoto,3,gprice
     ],
+    random:''
 
   },
   onLoad:function(options){ 
     this.getGoods();
+    this.setData({
+      random:Math.random() / 9999
+    })
     //console.log(this.data.goods);
   },
   getGoods:function(){ //获取菜品信息

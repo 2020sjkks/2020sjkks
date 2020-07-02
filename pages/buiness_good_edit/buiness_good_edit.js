@@ -44,6 +44,17 @@ Page({
       }
   })
   },
+  choosePhoto:function(){
+    wx.chooseImage({
+      count:1,
+      success:(res)=>{
+        console.log(res.tempFiles);
+        this.setData({
+          img_path:res.tempFilePaths[0]
+        })
+      }
+    })
+  },
   finish:function(){ //完成修改
     if(this.data.good_id==null){//添加商品
       wx.request({
@@ -61,6 +72,8 @@ Page({
               title: '添加成功,商品号为'+res.data.gid,
               icon:"none"
             });
+            console.log(res.data.gid);
+            this.editPhoto(res.data.gid);
           }
           else{
             wx.showToast({
@@ -88,6 +101,7 @@ Page({
             wx.showToast({
               title: '修改成功',
             });
+            this.editPhoto(this.data.good_id);
           }
           else{
             wx.showToast({
@@ -100,6 +114,19 @@ Page({
       
     }
   },
-
-
+  editPhoto:function(gid){
+    wx.uploadFile({
+      filePath: this.data.img_path,
+      name: 'file',
+      url: 'http://brucemarkdown.top:5000/upload_photo',
+      formData:{
+        gid:gid
+      }
+    });
+    var pages = getCurrentPages()                //获取加载的页面( 页面栈 )
+    var prevPage = pages[pages.length - 2]       //获取上一个页面
+    prevPage.setData({
+      goods:prevPage.data.goods
+    })
+  }
 })
