@@ -6,20 +6,24 @@
   <view class='price'>￥{{good_price}}</view>
 </view>
 <view class="good">
-<view class="detail">商品详情
+<view class="sales">销售量：{{sales}}</view>
+<view class='introd'>招牌菜</view>
+</view>
+<view class="good">
+<view class="detail">商品详情:
   {{good_detail}}
 </view>
 </view>
-商品评价：
+
+<view class="detail">商品评价：
+</view>
 <view class='list'>
   <block wx:for="{{comment}}" wx:key="index">
     <view class='list_item'>{{item}}</view> 
   </block>
 </view>
 
-
-
-
+ <!--分割-->
  
 
 

@@ -10,7 +10,6 @@ page{
 }
 
 .list .list_item{
-  margin-top:10px;
   padding:10px;
   height:100px;
   border-bottom:1px solid #E8E8E8;
@@ -35,31 +34,38 @@ page{
 .list .list_item .info .title{
   color:#333;
   margin-left:10px;
+  margin-top:-4px;
   font-size: 20px;
-}
-.list .list_item .info .selected{
-  color:#333;
-  margin-left:135px;
-  margin-top: -60px;
-  font-size: 15px;
 }
 .list .list_item .info .price{
   color:#FF2727;
   margin-left:10px;
-  margin-top:10px;
+  margin-top:7px;
   font-size:20px;
 }
+.list .list_item .info .sales{
+  color:#333;
+  margin-left:10px;
+  margin-top:7px;
+  font-size:14px;
+}
+.list .list_item .info .selected{
+  color:#333;
+  margin-left:120px;
+  margin-top: -80px;
+  font-size: 15px;
+}
 .list .list_item .info .add{
-  margin-top:-20px;
-  margin-right: 10px;
+  margin-top:-40px;
+  margin-right: 20px;
   width: 27px;
   height: 27px;
   float: right;
 }
 .list .list_item .info .minus{
-  margin-left:120px;
+  margin-left:110px;
   float: left;
-  margin-top: -20px;
+  margin-top: -40px;
   width: 27px;
   height: 27px;
 }
@@ -78,7 +84,7 @@ page{
   background-color: rgb(123,191,234);
   border-radius: 20%;
   color: white;
-  box-shadow: 0 0 3px #000000;
+  box-shadow: 0 0 3px #333;
 }
 .blank{
   height: 80px;

@@ -3,13 +3,13 @@ Page({
     // 数据源
     goods:[//0:gid,1:gname,2:gphoto,3,gprice
     ],
+    sales:[],
     shopping_cart:{     //购物车商品 {菜品Aid:数量,菜品Bid:数量...}
-
     }
   },
   onLoad:function(options){ 
     this.getGoods();
-    console.log(this.data.goods)
+    this.get_sales();
   },
   getGoods:function(){ //获取菜品信息
     console.log("tap");
@@ -19,10 +19,11 @@ Page({
       complete: (res) => {
         //console.log(res);
         this.setData({
-          goods:res["data"]
+          goods:res.data
         })
+        console.log(this.data)
         //创建选菜单表
-        for (var item of res['data']) {
+        for (var item of res.data) {
           //console.log(item);
           this.setData(
             {
@@ -31,10 +32,20 @@ Page({
         }},
     })
   },
+  get_sales:function(){
+    wx.request({
+      url: 'http://brucemarkdown.top:5000/sales',
+      success:(res)=>{
+        this.setData({
+          sales:res.data
+        })
+      }
+    })
+  },
   get_good_info:function(e){
     var index=parseInt(e.currentTarget.dataset.index);
     wx.navigateTo({  //提交参数到商品明细页：商品id
-      url: '/pages/good_info/good_info?good_id='+this.data.goods[index][0]
+      url: '/pages/good_info/good_info?good_id='+this.data.goods[index][0]+'&sales='+this.data.sales[index]
     })
   },
   add_good:function(e){  //菜品添加到购物车
