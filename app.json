@@ -13,7 +13,8 @@
     "pages/business_home/business_home",
     "pages/business_good/business_good",
     "pages/new_order/new_order",
-    "pages/business_good_edit/business_good_edit"
+    "pages/business_good_edit/business_good_edit",
+    "pages/business_summary/business_summary"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,0 +1,13 @@
+/* pages/business_summary/business_summary.wxss */
+.sales_by_day{
+  width: 100%;
+  height: 300px;
+  position: relative;
+  align-self: center;
+}
+.title{
+  font-size: 25px;
+  color: black;
+  text-shadow:1px 1px 1px #cccccc;
+  margin-left: 10px;
+}

@@ -1,39 +1,43 @@
-// pages/business_home/business_home.js
+// pages/business_summary/business_summary.js
 Page({
+
   /**
    * 页面的初始数据
    */
   data: {
+    random:''
   },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.setData({
+      random:Math.random() / 9999
+    })
+  },
+  refresh:function(){
+    wx.request({
+      url: 'http://brucemarkdown.top:5000/refresh_sales',
+      complete:(res)=>{
+        if(res.data=='succeed'){
+          this.setData({
+            random:Math.random() / 9999
+          })
+        }
+        else{
+          wx.showToast({
+            title: '刷新失败',
+            icon:'none'
+          })
+        }
+      }
+    })
+  },
 
-  },
-  new_order:function(){
-    wx.navigateTo({
-      url: '/pages/new_order/new_order',
-    })
-  },
-  summary:function(){
-    wx.navigateTo({
-      url: '/pages/business_summary/business_summary',
-    })
-  },
-  exit:function(){
-    wx.reLaunch({
-      url: '/pages/login/login',
-    })
-  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  editGood:function(){
-    wx.navigateTo({
-      url: '/pages/business_good/business_good',
-    })
-  },
   onReady: function () {
 
   },
@@ -78,4 +82,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }})
+  }
+})

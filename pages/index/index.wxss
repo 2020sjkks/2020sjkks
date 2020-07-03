@@ -1,6 +1,13 @@
 page{
   background: #F6F6F6;
 }
+.box-sv{
+  width: 700rpx;padding: 30rpx 0;height: 399rpx;white-space:nowrap;margin:3% auto
+}
+.box-sv image{
+  width: 600rpx;height: 399rpx;margin-right: 20rpx;border-radius: 5px;
+}
+
 .list{
   margin-top:10px;
   background: #fff;

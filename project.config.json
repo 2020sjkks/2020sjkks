@@ -111,8 +111,9 @@
 				{
 					"id": 7,
 					"name": "pages/business_home/business_home",
-					"pathName": "pages/business_good/business_good",
-					"query": ""
+					"pathName": "pages/business_home/business_home",
+					"query": "",
+					"scene": null
 				},
 				{
 					"id": -1,
@@ -125,6 +126,7 @@
 					"id": -1,
 					"name": "pages/comment/comment",
 					"pathName": "pages/comment/comment",
+					"query": "",
 					"scene": null
 				}
 			]
