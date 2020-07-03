@@ -9,6 +9,7 @@ Page({
     comment:null,
     input:null,
     score:null,
+    oriscore:null,
     stars:[
       {
         flag:1,
@@ -81,7 +82,8 @@ Page({
       method:'POST',
       success:(res)=>{
         this.setData({
-          comment:res.data
+          comment:res.data[0][1],
+          oriscore:res.data[0][0]
         })
       }
     })
@@ -89,6 +91,7 @@ Page({
 
   setcomment(){
     let input = this.data.input
+    let score=this.data.score
     wx.request({
       url: 'http://brucemarkdown.top:5000/set_comment',
       data:{
@@ -103,10 +106,7 @@ Page({
           wx: wx.showToast({
             title: '设置成功'
           })
-          this.setData({
-            comment:input,
-            input:''
-          })
+          this.get_comment()
         }
       }
   })
