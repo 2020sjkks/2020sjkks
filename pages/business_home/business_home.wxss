@@ -14,3 +14,12 @@ page{
   align-items:center;
   border: 8px solid #7bbfea;
 }
+.small{
+  border:  2px solid rgb(123,191,234);
+  background-color: white;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 200rpx;
+  margin-bottom: 200rpx;
+  border-radius: 15px; 
+}

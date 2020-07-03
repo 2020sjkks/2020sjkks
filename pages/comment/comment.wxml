@@ -1,5 +1,13 @@
 <view class='small'>
 <view class='nowphone'>您的评价：{{comment}}</view>
+<view class='stars'>
+    <view class='txt'>评分:</view>
+    <view class='content'>  
+      <view>
+        <view wx:for="{{stars}}" wx:key="index" style='background:url("{{item.flag==1?item.bgImg:item.bgfImg}}") no-repeat top; background-size:100%;' data-index="{{index}}" bindtap='score'></view>
+      </view>
+    </view>
+  </view>
 <input placeholder-class="placeholder1" class="input1" placeholder="评价" bindinput='getinput' value='{{input}}' />
 <button class="button1" bindtap="setcomment">修改</button>
 </view>

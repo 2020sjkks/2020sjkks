@@ -1,6 +1,5 @@
 // pages/comment/comment.js
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -8,7 +7,56 @@ Page({
     gid:null,
     oid:null,
     comment:null,
-    input:null
+    input:null,
+    score:null,
+    stars:[
+      {
+        flag:1,
+        bgImg: "/imgs/star1.png",
+        bgfImg:"/imgs/star2.png"
+      },
+      {
+        flag: 1,
+        bgImg: "/imgs/star1.png",
+        bgfImg: "/imgs/star2.png"
+      },
+      {
+        flag: 1,
+        bgImg:"/imgs/star1.png",
+        bgfImg: "/imgs/star2.png"
+      },
+      {
+        flag: 1,
+        bgImg: "/imgs/star1.png",
+        bgfImg: "/imgs/star2.png"
+      },
+      {
+        flag: 1,
+        bgImg:"/imgs/star1.png",
+        bgfImg: "/imgs/star2.png"
+      }
+    ]
+  },
+  score:function(e){
+    var that=this;
+    for(var i=0;i<that.data.stars.length;i++){
+      var allItem = 'stars['+i+'].flag';
+      that.setData({
+        [allItem]: 1
+      })
+    }
+    var index=e.currentTarget.dataset.index;
+    console.log(index)
+    this.setData({
+      score:index+1
+    })
+    console.log(this.data.score)
+    for(var i=0;i<=index;i++){
+      var item = 'stars['+i+'].flag';
+      that.setData({
+        [item]:2
+      })
+    }
   },
 
   /**
@@ -18,6 +66,8 @@ Page({
     this.setData({
       gid:options.gid,
       oid:options.oid
+      //oid:105,
+      //gid:1
     })
     this.get_comment()
   },
@@ -43,6 +93,7 @@ Page({
       url: 'http://brucemarkdown.top:5000/set_comment',
       data:{
         input:this.data.input,
+        score:this.data.score,
         oid:this.data.oid,
         gid:this.data.gid
       },

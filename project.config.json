@@ -120,6 +120,12 @@
 					"pathName": "pages/new_order/new_order",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/comment/comment",
+					"pathName": "pages/comment/comment",
+					"scene": null
 				}
 			]
 		}

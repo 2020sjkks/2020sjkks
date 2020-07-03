@@ -34,3 +34,28 @@
   font-size: 14px;
   color: gray;
 }
+
+
+.stars{
+  background-color: #fff;
+  margin-left: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+}
+.stars .txt{
+  padding-left: -5px;
+  font-size: 14px;
+  color: gray;
+}
+.stars .content>view:last-of-type{
+  height: 40rpx;
+  margin-top: 48rpx;
+}
+.stars .content>view:last-of-type view{
+  float: left;
+  width: 42rpx;
+  height: 42rpx;
+  margin-right: 25rpx;
+  background-size: 100% 100%;
+}

@@ -4,7 +4,6 @@ Page({
     goods:[//0:gid,1:gname,2:gphoto,3,gprice
     ],
     random:''
-
   },
   onLoad:function(options){ 
     this.getGoods();
