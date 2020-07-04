@@ -18,14 +18,13 @@
 <view class="line"></view>
 
 <view class="hr"></view>
-<view class="item" bindtap="setuser">
+<view class="item" bindtap="set_user">
   <view class="title">账户设置</view>
   <view class="detail2">
     <text> ></text>
   </view>
 </view>
 <view class="line"></view>
-
  <view class='item' bindtap="exit">
     <view class="title">退出登录</view>
     <view class="detail2">

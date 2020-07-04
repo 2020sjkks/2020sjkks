@@ -61,6 +61,7 @@ Page({
           app.globalData.uphoto=res.data['user_info'][2] 
           app.globalData.uaddress=res.data['user_info'][3] 
           app.globalData.upassword=res.data['user_info'][4] 
+          console.log(app.globalData.upassword)
           app.globalData.uphone=res.data['user_info'][5]
           wx.switchTab({
             url: "/pages/index/index",

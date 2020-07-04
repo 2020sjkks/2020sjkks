@@ -8,6 +8,7 @@
     "pages/shoppingcart/shoppingcart",
     "pages/set_phone/set_phone",
     "pages/set_address/set_address",
+    "pages/set_user/set_user",
     "pages/order_info/order_info",
     "pages/comment/comment",
     "pages/business_home/business_home",

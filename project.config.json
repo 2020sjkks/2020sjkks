@@ -128,6 +128,12 @@
 					"pathName": "pages/comment/comment",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/set_user/set_user",
+					"pathName": "pages/set_user/set_user",
+					"scene": null
 				}
 			]
 		}

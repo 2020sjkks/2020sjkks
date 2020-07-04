@@ -27,6 +27,11 @@ Page({
       url: '/pages/set_phone/set_phone',
     })
   },
+  set_user(){
+    wx.navigateTo({
+      url: '/pages/set_user/set_user',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
