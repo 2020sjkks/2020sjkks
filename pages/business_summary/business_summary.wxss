@@ -11,3 +11,10 @@
   text-shadow:1px 1px 1px #cccccc;
   margin-left: 10px;
 }
+.btn{
+  background-color: #7bbfea;
+  color: white;
+}
+.blank{
+  height: 20px;
+}

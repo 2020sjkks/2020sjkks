@@ -1,3 +1,6 @@
 <view><text class="title">每日销售额</text></view>
 <image class="sales_by_day" src="http://brucemarkdown.top:5000/image/sales_by_day.jpg?{{random}}"></image>
-<button bindtap="refresh">刷新数据</button>
+<view><text class="title">菜品平均评分统计</text></view>
+<image class="sales_by_day" src="http://brucemarkdown.top:5000/image/good_score.jpg?{{random}}"></image>
+<button bindtap="refresh" class="btn" >刷新数据</button>
+<view class="blank"></view>
