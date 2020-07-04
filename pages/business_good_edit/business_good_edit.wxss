@@ -39,11 +39,14 @@
 }
 .detail{
   border-bottom:1px solid #F6F6F6;
-  margin-top: 15px;
-  text-indent:2em;    
-  margin-bottom: 15px;
   width: auto;
   height: 200px;
+  color:black;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 10px;   
+  font-size: 23px;
+  margin-bottom: 10px;
 }
 
 .img{
