@@ -1,5 +1,5 @@
 <scroll-view class='box-sv' scroll-x >
-<image wx:for="{{goods}}" wx:key="{{index}}" src='http://brucemarkdown.top:5000/image/{{item[2]}}.jpg' bindtap='img' mode="aspectFill" data-url='http://brucemarkdown.top:5000/image/{{item[2]}}.jpg'></image>
+<image wx:for="{{goods}}" wx:key="index" src='http://brucemarkdown.top:5000/image/{{item[2]}}.jpg' bindtap='img' mode="aspectFill" data-url='http://brucemarkdown.top:5000/image/{{item[2]}}.jpg'></image>
 </scroll-view>
 <view>菜品列表</view>
 <view class='list'>
