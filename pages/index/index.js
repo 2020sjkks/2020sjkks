@@ -52,7 +52,6 @@ Page({
         console.log(res.data.data)
         console.log(this.data.goods[0]==undefined)
         if(res.data.state=='succeed'){
-          while(this.data.goods[0]==undefined)console.log(this.data.goods) //等待goods更新
           for(var index in res.data.data){
             for(var i in this.data.goods){
               //console.log(this.data.goods[i][0],res.data.data[index][0])
