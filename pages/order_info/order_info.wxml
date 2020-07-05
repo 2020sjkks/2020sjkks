@@ -2,18 +2,18 @@
 <text class="orderinfo_title">订单详情</text>
 <view class="list_item">
   <view>
-    <text>订单号：{{oid}}</text>
+    <text class='t'>订单号：{{oid}}</text>
   </view>
   <view>
-    <text>订单时间：{{goods[0][4]}}</text>
+    <text class='t'>订单时间：{{goods[0][4]}}</text>
   </view>
   <image class='accepted' wx:if='{{accepted==1}}' src='/imgs/finish.png'></image>
   <image class='accepted' wx:if='{{accepted==0}}' src='/imgs/unfinish.png'></image>
   <view>
-    <text>手机号码：{{phone}}</text>
+    <text class='t'>手机号码：{{phone}}</text>
   </view>
   <view>
-    <text>配送地址：{{address}}</text>
+    <text class='t'>配送地址：{{address}}</text>
   </view>
 </view>
 <view class='divideline'></view>

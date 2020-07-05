@@ -5,6 +5,7 @@ Page({
     good_detail:null,
     good_price:null,
     img_path:null,
+    score:null,
     comment:[],
     sales:null
   },
@@ -18,6 +19,21 @@ Page({
       //img_path:"http://brucemarkdown.top:5000/image/"+options.img+'.jpg'
     });
     this.get_goodinfo()
+    this.get_score()
+  },
+  get_score(){
+    wx.request({
+      url: 'http://brucemarkdown.top:5000/get_introd',
+      method:'POST',
+      data:{
+        good_id:this.data.good_id
+      },
+      success:(res)=>{
+        this.setData({
+          score:res.data
+        })
+      }
+    })
   },
   get_goodinfo(){
     wx.request({
