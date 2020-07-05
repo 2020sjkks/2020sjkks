@@ -22,13 +22,32 @@ Page({
         this.setData({
           goods:res.data
         })
-        console.log(this.data)
         //创建选菜单表
-        for (var item of res.data) {
+        for (var item of res.data) { //获取热门推荐
           //console.log(item);
           this.setData(
             {
               ['shopping_cart.'+item[0]]:0,
+            })
+            wx.request({
+              url: 'http://brucemarkdown.top:5000/get_best_good',
+              method:'POST',
+              success:(res1)=>{
+                var best=[]
+                if(res1.data.state=='succeed'){
+                  for(var index in res1.data.data){
+                    for(var i in res.data){
+                      if(res.data[i][0]==res1.data.data[index][0])
+                        best.push(i);
+                        //console.log(best);
+                    }
+                  }
+                  this.setData({
+                    best:best
+                  })
+                //console.log(this.data.best)
+                }
+              }
             })
         }},
     })
@@ -43,32 +62,7 @@ Page({
       }
     })
   },
-  getBest:function(){
-    wx.request({
-      url: 'http://brucemarkdown.top:5000/get_best_good',
-      method:'POST',
-      success:(res)=>{
-        var best=[]
-        console.log(res.data.data)
-        console.log(this.data.goods[0]==undefined)
-        if(res.data.state=='succeed'){
-          while(this.data.goods[0]==undefined)console.log(this.data.goods) //等待goods更新
-          for(var index in res.data.data){
-            for(var i in this.data.goods){
-              //console.log(this.data.goods[i][0],res.data.data[index][0])
-              if(this.data.goods[i][0]==res.data.data[index][0])
-                best.push(i);
-                //console.log(best);
-            }
-          }
-          this.setData({
-            best:best
-          })
-        //console.log(this.data.best)
-        }
-      }
-    })
-  },
+  
   get_good_info:function(e){
     var index=parseInt(e.currentTarget.dataset.index);
     wx.navigateTo({  //提交参数到商品明细页：商品id
@@ -114,6 +108,5 @@ Page({
     })
   },
   onShow:function(){
-    this.getBest();
   }
 })
