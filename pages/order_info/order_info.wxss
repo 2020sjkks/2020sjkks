@@ -86,3 +86,7 @@
   margin-left: 530rpx;
   position: absolute
 }
+.t{
+  color: gray;
+  
+}

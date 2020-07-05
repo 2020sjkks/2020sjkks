@@ -18,7 +18,7 @@
 }
 .introd{ 
   color:rgb(123,191,234);
-  margin-left: 175px;
+  margin-left: 180px;
   margin-top: 7px;  
   margin-bottom: 7px;
 }
@@ -40,6 +40,12 @@
   align-items: center;
   
 }
+.divLine{
+  background: #E0E3DA;
+  width: 100%;
+  margin-left: 30px;
+  height: 5rpx;
+ }
 .pic{
   border:5px solid skyblue;
 }
@@ -47,13 +53,34 @@
   margin-top:10px;
 }
 .list .list_item{
-  margin-top:10px;
+  margin-top:5px;
   margin-left: 30px;
-  border: 1px black;
+  margin-right: 30px;
+  color:rgb(82, 72, 58);
 }
 .sales{
   margin-left: 20px;
   margin-top: 7px;  
   margin-bottom: 7px;
   color:rgb(123,191,234);
+}
+.name_time{
+  display: flex;
+  flex-flow:row;
+}
+.name2{
+  color: red;
+  margin-left: 30px;
+  margin-top: 5px;
+  font-size: 13px;
+  width:50%;
+  display:inline-block;
+}
+.time{
+  font-size: 13px;
+  margin-top: 5px;
+  float:right;
+  color:gray;
+  text-align:right;
+  padding-right:30px;
 }
