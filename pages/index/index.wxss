@@ -1,11 +1,21 @@
 page{
   background: #F6F6F6;
 }
+.title{
+  font-size: 25px;
+  color: black;
+  text-shadow:1px 1px 1px #cccccc;
+  margin-left: 10px;
+}
 .box-sv{
-  width: 700rpx;padding: 30rpx 0;height: 399rpx;white-space:nowrap;margin:3% auto
+  width: 700rpx;padding: 30rpx 0;height: 410rpx;white-space:nowrap;margin:3% auto;
+  
 }
 .box-sv image{
-  width: 600rpx;height: 399rpx;margin-right: 20rpx;border-radius: 5px;
+  width: 680rpx;height: 399rpx;margin-left: 10rpx; margin-right: 10rpx;border-radius: 20px;
+}
+.box-sv .img{
+  width: 680rpx;height: 399rpx;margin-right: 10rpx;border-radius: 10rpx;box-shadow: 0 0 10rpx black;
 }
 
 .list{

@@ -5,7 +5,8 @@ Page({
     ],
     sales:[],
     shopping_cart:{     //购物车商品 {菜品Aid:数量,菜品Bid:数量...}
-    }
+    },
+    best:[]
   },
   onLoad:function(options){ 
     this.getGoods();
@@ -39,6 +40,32 @@ Page({
         this.setData({
           sales:res.data
         })
+      }
+    })
+  },
+  getBest:function(){
+    wx.request({
+      url: 'http://brucemarkdown.top:5000/get_best_good',
+      method:'POST',
+      success:(res)=>{
+        var best=[]
+        console.log(res.data.data)
+        console.log(this.data.goods[0]==undefined)
+        if(res.data.state=='succeed'){
+          while(this.data.goods[0]==undefined)console.log(this.data.goods) //等待goods更新
+          for(var index in res.data.data){
+            for(var i in this.data.goods){
+              //console.log(this.data.goods[i][0],res.data.data[index][0])
+              if(this.data.goods[i][0]==res.data.data[index][0])
+                best.push(i);
+                //console.log(best);
+            }
+          }
+          this.setData({
+            best:best
+          })
+        //console.log(this.data.best)
+        }
       }
     })
   },
@@ -85,5 +112,8 @@ Page({
       title: '请先选择菜品',
       icon:'none'
     })
+  },
+  onShow:function(){
+    this.getBest();
   }
 })
