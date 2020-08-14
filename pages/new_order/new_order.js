@@ -89,6 +89,7 @@ Page({
     var that = this;
     interval = setInterval(function() {
       that.get_unaccepted_order()
+      that.get_all_order()
       console.log("10 secs")
     }, 10000)
   },
