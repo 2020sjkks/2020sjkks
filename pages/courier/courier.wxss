@@ -1,1 +1,97 @@
-/* pages/courier/courier.wxss */
+page{
+  background: #F6F6F6;
+}
+.navbar{  
+  display: flex;  
+  background: #fff;  
+}  
+.navbar .item{  
+  position: relative;  
+  flex: auto;  
+  font-size: 27rpx;
+  width: 100rpx;
+  text-align: center;  
+  line-height: 80rpx;  
+  color:  #333;
+    border-bottom: 6rpx solid #ddd;
+}  
+/* 选中菜单样式 */
+.navbar .item.active{  
+  color: #333333;  
+  border-bottom: 6rpx solid #7bbfea;
+  
+}  
+/* 字体 */
+.navbar .item.active:after{  
+  content: "";  
+  display: block;  
+  position: absolute;  
+  bottom: 0;  
+  left: 0;  
+  right: 0;  
+  height: 4rpx;  
+}  
+.order_list{
+  background: #fff;
+  width: 95%;
+  position: relative;
+  margin: 10px 10px 10px 10px;
+}
+.order_list .money{
+  border-bottom: 1px solid #f2f2f2;
+  padding:  30rpx 30rpx 30rpx 30rpx;
+}
+.order_list .money text{
+  color: #666;
+  font-size: 17px;
+  float: right;
+  line-height: 50rpx;
+  margin-right: 20rpx;
+}
+.order_list .detail{
+  margin-top: 15px;
+  margin-left: 20px;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+.order_list .detail text{
+  margin-right: 30rpx;
+  font-size: 35rpx;
+  color:black;
+}
+.order_list image{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-top: 32rpx;
+  margin-left: 530rpx;
+  position: absolute
+}
+.division{
+  width: 100%;
+  height: 1px;
+  background: #f2f2f2;
+  margin-top: 40rpx;
+}
+.btn1{
+  background: #fff;
+  color: #7bbfea;
+  border-radius: 10rpx;
+  margin-top: 20rpx;
+  font-size: 30rpx;
+  width: 100rpx;
+  height: 50rpx;
+  display:flex; 
+  justify-content:center; 
+  align-items:center;
+  border: 1px solid #7bbfea;
+}
+.page_row{
+  display: flex;
+}
+.division2{
+  width: 100%;
+  height: 20rpx;
+  background: #f2f2f2;
+  margin-top: 20rpx;
+}
