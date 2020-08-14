@@ -8,7 +8,7 @@ Page({
   data: {
     unaccepted_order:[],
     all_order:[],
-    navbar: ['待完成', '所有订单'],
+    navbar: ['待完成', '已完成'],
     currentTab: 0,
     index: 0,
   },
@@ -67,7 +67,7 @@ Page({
       success:(res)=>{
         if(res.data=='succeed'){
           wx.showToast({
-            title: '已完成',
+            title: '已派单',
             icon:"none"
           })
           this.get_unaccepted_order()
