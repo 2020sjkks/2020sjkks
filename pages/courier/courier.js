@@ -5,21 +5,49 @@ Page({
    * 页面的初始数据
    */
   data: {
-    array: [{'订单号':'123','地址':'五山东十','手机号':'1234'}, 
-            {'订单号':'124','地址':'五山东三','手机号':'1278'},
-            {'订单号':'125','地址':'五山东五','手机号':'6878'}, 
-            {'订单号':'126','地址':'五山东二','手机号':'2345'}, 
-            {'订单号':'127','地址':'五山东一','手机号':'3567'},  
-    ]
+    orderinfo:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    wx.request({
+      url: 'http://brucemarkdown.top:5000/get_uncouried_order',
+      success:(res)=>{
+        this.setData({
+          orderinfo:res.data
+        })
+      }
+    })
   },
-
+  be_a_courier:function(e){
+    var index=parseInt(e.currentTarget.dataset.index);
+    console.log(getApp().globalData.uphone);
+    wx.request({
+      url: 'http://brucemarkdown.top:5000/be_a_courier',
+      method:'POST',
+      data: {
+        uid:getApp().globalData.uid,
+        oid:this.data.orderinfo[index][0],
+        phone:getApp().globalData.uphone,
+      },
+      success:(res)=>{
+        if(res.data=='succeed'){
+          wx.showToast({
+            title: '接单成功',
+            icon:'success'
+          });
+          this.onLoad();
+        }
+        else{
+          wx.showToast({
+            title: '接单失败！',
+          })
+        }
+      }
+    });
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -31,7 +59,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.onLoad();
   },
 
   /**
