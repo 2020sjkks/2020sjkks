@@ -15,7 +15,8 @@
     "pages/business_good/business_good",
     "pages/new_order/new_order",
     "pages/business_good_edit/business_good_edit",
-    "pages/business_summary/business_summary"
+    "pages/business_summary/business_summary",
+    "pages/courier/courier"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -37,6 +38,12 @@
         "text": "订单",
         "iconPath": "imgs/订单.png",
         "selectedIconPath": "imgs/订单1.png"
+      },
+      {
+        "pagePath": "pages/courier/courier",
+        "text": "接单",
+        "iconPath": "imgs/courier.png",
+        "selectedIconPath": "imgs/courier1.png"
       },
       {
         "pagePath": "pages/user/user",
