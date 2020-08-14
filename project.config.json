@@ -133,6 +133,13 @@
 					"id": -1,
 					"name": "pages/set_user/set_user",
 					"pathName": "pages/set_user/set_user",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/courier/courier",
+					"pathName": "pages/courier/courier",
 					"scene": null
 				}
 			]
