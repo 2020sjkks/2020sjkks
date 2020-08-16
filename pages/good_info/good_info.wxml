@@ -6,8 +6,8 @@
   <view class='price'>￥{{good_price}}</view>
 </view>
 <view class="good">
-<view class="sales">销售量：{{sales}}</view>
-<view class='introd'>评分:{{score}}</view>
+<view class="sales">销售量：{{sales}}份</view>
+<view class='introd' >评分:{{score}}</view>
 </view>
 <view class="good">
 <view class="detail">商品详情:

@@ -26,7 +26,7 @@
     <view class='division'></view>
     <view class='page_row'>
       <button class='btn1' data-index="{{index}}" bindtap="goto_order">查看详情</button>
-      <button class='btn1' data-index="{{index}}" bindtap="accept_order" wx:if='{{item[2]==1}}'>已派单</button>
+      <button class='btn1' data-index="{{index}}"  wx:if='{{item[2]==1}}'>已派单</button>
       <button class='btn1' data-index="{{index}}" bindtap="accept_order" wx:if='{{item[2]==0}}'>派单</button>
     </view>
     <view class='division2'></view>

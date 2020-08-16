@@ -34,15 +34,17 @@ Page({
       },
       success:(res)=>{
         if(res.data=='succeed'){
-          wx.showToast({
-            title: '接单成功',
-            icon:'success'
-          });
+          wx.showModal({
+            title:'接单成功',
+            content:"请保证外卖送到指定地点",
+            showCancel:false
+          })
           this.onLoad();
         }
         else{
           wx.showToast({
             title: '接单失败！',
+            icon:'none'
           })
         }
       }

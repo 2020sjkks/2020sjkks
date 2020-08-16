@@ -25,7 +25,7 @@
 }
 .price{ 
   color:#FF2727;
-  margin-left: 50px;
+  margin-left: 30px;
   font-size: 25px;
   display: flex;
 }

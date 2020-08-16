@@ -58,7 +58,9 @@ Page({
       success:(res)=>{
         this.setData({
           sales:res.data
-        })
+        });
+        console.log(res.data);
+        if(res.data==null)this.setData({sales:0});
       }
     })
   },

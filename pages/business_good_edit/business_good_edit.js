@@ -9,7 +9,7 @@ Page({
     title:'菜品编辑'
   },
   onLoad:function(options){
-    console.log(options)
+    console.log(options.good_id)
     if(options.good_id==undefined){
       this.setData({
         img_path:"/imgs/photo.png",
@@ -34,6 +34,7 @@ Page({
       },
       success: (res)=>{
         console.log(res.data);
+        console.log(res.data)
         this.setData({
           good_name:res.data.info[0][1],
           good_detail:res.data.info[0][2],
@@ -94,7 +95,7 @@ Page({
           gname:this.data.good_name,
           gdetail:this.data.good_detail,
           gprice:this.data.good_price,
-          gphoto:this.data.good_photo
+          gphoto:this.data.good_id
         },
         success: (res)=>{
           if(res.data=='succeed'){

@@ -12,7 +12,8 @@
     <view class='info'>
       <view class='title' data-index="{{index}}" bindtap="get_good_info">{{item[1]}}</view> 
       <view class="price">￥{{item[3]}}</view>
-      <view class="sales">销量:{{sales[index]}}</view>
+      <view class="sales" wx:if='{{sales[index][0]>0}}'>销量:{{sales[index]}}份</view>
+      <view class="sales" wx:if='{{sales[index][0]==null}}'>销量:0份</view>
       <image class="add" src="/imgs/add.png" data-index="{{item[0]}}" bindtap="add_good"></image>
       <image class="minus" src="/imgs/minus.png" data-index="{{item[0]}}" bindtap="minus_good"></image>
       <view class='selected' >已选 {{shopping_cart[item[0]]}} 份</view> 

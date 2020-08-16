@@ -10,12 +10,15 @@ Page({
     totalprice:0.0,
     accepted:0,
     address:'',
-    phone:''
+    phone:'',
+    business:0
   },
-  onLoad: function (options) { 
+  onLoad: function (options) {
     this.setData({
-      oid:options.oid
-    })
+      oid:options.oid,
+      business:options.business
+    });
+    console.log(this.data.business);
     wx.request({
       url: 'http://brucemarkdown.top:5000/orderinfo',
       data: { 
@@ -23,8 +26,8 @@ Page({
       },
       method:"POST",
       success: (res) => {
-          console.log(res.data.data);
-          if(res.data.result=='succeed'){
+        console.log(res.data.data);
+           if(res.data.result=='succeed'){
             this.setData({
               goods:res.data.data,
               totalprice:res.data.data[0][5],
@@ -48,6 +51,12 @@ Page({
     var index=parseInt(e.currentTarget.dataset.index)
     wx.navigateTo({ //跳转到订单详情
       url: '/pages/comment/comment?gid='+this.data.goods[index][7]+'&oid='+this.data.oid
+    })
+  },
+  cannot_comment:function(){
+    wx.showToast({
+      title: '订单尚未完成,不能评价',
+      icon:"none"
     })
   },
   /**

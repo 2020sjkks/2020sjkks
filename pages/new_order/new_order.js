@@ -35,14 +35,14 @@ Page({
     var index=parseInt(e.currentTarget.dataset.index);
     console.log(index)
     wx.navigateTo({ //跳转到订单详情
-      url: '/pages/order_info/order_info?oid='+this.data.unaccepted_order[index][0]
+      url: '/pages/order_info/order_info?oid='+this.data.unaccepted_order[index][0]+'&business=1'
     })
   },
   goto_order2:function(e){
     var index=parseInt(e.currentTarget.dataset.index);
     console.log(index)
     wx.navigateTo({ //跳转到订单详情
-      url: '/pages/order_info/order_info?oid='+this.data.all_order[index][0]
+      url: '/pages/order_info/order_info?oid='+this.data.all_order[index][0]+'&business=1'
     })
   },
   get_all_order(){
@@ -70,7 +70,7 @@ Page({
             title: '已派单',
             icon:"none"
           })
-          this.get_unaccepted_order()
+          this.onLoad();
       }
       }
     })

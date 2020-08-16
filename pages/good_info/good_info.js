@@ -18,6 +18,7 @@ Page({
       sales:options.sales
       //img_path:"http://brucemarkdown.top:5000/image/"+options.img+'.jpg'
     });
+    if(options.sales[0]==null)this.setData({sales:0});
     this.get_goodinfo()
     this.get_score()
   },
@@ -32,6 +33,8 @@ Page({
         this.setData({
           score:res.data
         })
+        console.log(res.data)
+        if(res.data.length==0)this.setData({score:'暂无'})
       }
     })
   },
