@@ -7,12 +7,16 @@ Page({
     img_path:null,
     score:null,
     comment:[],
-    sales:null
+    sales:null,
+    random:''
   },
   con:function(){
     console.log(this.data.comment)
   },
   onLoad:function(options){
+    this.setData({
+      random:Math.random() / 9999
+    })
     this.setData({
       good_id:options.good_id,
       sales:options.sales
@@ -58,7 +62,7 @@ Page({
           good_name:res.data.info[0][1],
           good_detail:res.data.info[0][2],
           good_price:res.data.info[0][4],
-          img_path:"http://brucemarkdown.top:5000/image/"+res.data.info[0][3]+'.jpg',
+          img_path:"http://brucemarkdown.top:5000/image/"+res.data.info[0][3]+'.jpg'+'?'+this.data.random,
           comment:comm
         })
       }

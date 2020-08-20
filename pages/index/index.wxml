@@ -1,13 +1,13 @@
 <scroll-view class='box-sv' scroll-x >
 <image mode="aspectFit" src="/imgs/best.jpg"></image>
-<image class="img" wx:for="{{best}}" wx:key="index" src='http://brucemarkdown.top:5000/image/{{goods[item][2]}}.jpg' bindtap='get_good_info' mode="aspectFill" data-index="{{item}}"></image>
+<image class="img" wx:for="{{best}}" wx:key="index" src='http://brucemarkdown.top:5000/image/{{goods[item][2]}}.jpg?{{random}}' bindtap='get_good_info' mode="aspectFill" data-index="{{item}}"></image>
 </scroll-view>
 <view class="title2">菜品列表</view>
 <view class='list'>
   <block  wx:for="{{goods}}" wx:key="index">
   <view class='list_item'>
     <view class='img'>
-      <image src="http://brucemarkdown.top:5000/image/{{item[2]}}.jpg" data-index="{{index}}" bindtap="get_good_info" ></image>
+      <image src="http://brucemarkdown.top:5000/image/{{item[2]}}.jpg?{{random}}" data-index="{{index}}" bindtap="get_good_info" ></image>
     </view>
     <view class='info'>
       <view class='title' data-index="{{index}}" bindtap="get_good_info">{{item[1]}}</view> 

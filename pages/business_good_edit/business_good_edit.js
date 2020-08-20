@@ -6,10 +6,14 @@ Page({
     good_price:'0.0',
     img_path:'',
     good_photo:'-1',
-    title:'菜品编辑'
+    title:'菜品编辑',
+    random:''
   },
   onLoad:function(options){
     console.log(options.good_id)
+    this.setData({
+      random:Math.random() / 9999
+    })
     if(options.good_id==undefined){
       this.setData({
         img_path:"/imgs/photo.png",
@@ -39,7 +43,7 @@ Page({
           good_name:res.data.info[0][1],
           good_detail:res.data.info[0][2],
           good_price:res.data.info[0][4],
-          img_path:"http://brucemarkdown.top:5000/image/"+res.data.info[0][3]+'.jpg',
+          img_path:"http://brucemarkdown.top:5000/image/"+res.data.info[0][3]+'.jpg'+'?'+this.data.random,
           gphoto:res.data.info[0][3]
         })
       }
@@ -57,6 +61,13 @@ Page({
     })
   },
   finish:function(){ //完成修改
+    if(this.data.good_detail.length>200){
+      wx.showToast({
+        title: '简介限制在两百字内',
+        icon:'none'
+      });
+      return;
+    }
     if(this.data.good_id==null){//添加商品
       wx.request({
         url: 'http://brucemarkdown.top:5000/add_good',

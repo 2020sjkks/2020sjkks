@@ -6,9 +6,13 @@ Page({
     sales:[],
     shopping_cart:{     //购物车商品 {菜品Aid:数量,菜品Bid:数量...}
     },
-    best:[]
+    best:[],
+    random:''
   },
   onLoad:function(options){ 
+    this.setData({
+      random:Math.random() / 9999
+    })
     this.getGoods();
     this.get_sales();
   },

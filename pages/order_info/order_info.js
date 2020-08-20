@@ -13,9 +13,13 @@ Page({
     phone:'',
     business:0,
     courier:'',
-    courier_phone:''
+    courier_phone:'',
+    random:''
   },
   onLoad: function (options) {
+    this.setData({
+      random:Math.random() / 9999
+    })
     this.setData({
       oid:options.oid,
       business:options.business
