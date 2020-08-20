@@ -11,7 +11,9 @@ Page({
     accepted:0,
     address:'',
     phone:'',
-    business:0
+    business:0,
+    courier:'',
+    courier_phone:''
   },
   onLoad: function (options) {
     this.setData({
@@ -28,12 +30,16 @@ Page({
       success: (res) => {
         console.log(res.data.data);
            if(res.data.result=='succeed'){
+            if(res.data.data[0][11]!=null)var phone=res.data.data[0][11];
+            else var phone='暂无';
             this.setData({
               goods:res.data.data,
               totalprice:res.data.data[0][5],
               accepted:res.data.data[0][6],
               phone:res.data.data[0][8],
               address:res.data.data[0][9],
+              courier:res.data.data[0][10],
+              courier_phone:phone
             })
         }
         else {

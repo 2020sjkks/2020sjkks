@@ -9,6 +9,7 @@
 }
 .list{
   margin-top:10px;
+  height: 100px ;
 }
 
 .list .list_item{
@@ -101,5 +102,4 @@
 }
 .t{
   color: gray;
-  
 }
