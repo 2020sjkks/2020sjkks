@@ -7,6 +7,10 @@
 <view hidden="{{currentTab!==0}}">
 <view class='order_list'>
   <block wx:for='{{unaccepted_order}}' wx:key='index'>
+    <view class='money' wx:if='{{item[2]==2}}' >
+      配送中
+      <text>{{item[4]}}</text>
+    </view>
     <view class='money' wx:if='{{item[2]==1}}' >
       待接单
       <text>{{item[4]}}</text>
@@ -15,6 +19,7 @@
       制作中
       <text>{{item[4]}}</text>
     </view>
+    <image wx:if='{{item[2]==2}}' src='/imgs/配送.png'></image>
     <image wx:if='{{item[2]==1}}' src='/imgs/接单中.png'></image>
     <image wx:if='{{item[2]==0}}' src='/imgs/制作任务.png'></image>
     <view class='detail'>
