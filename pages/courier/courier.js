@@ -5,7 +5,11 @@ Page({
    * 页面的初始数据
    */
   data: {
-    orderinfo:[]
+    orderinfo:[],
+    myorderinfo:[],
+    navbar: ['待接单', '我的接单'],
+    currentTab: 0,
+    index: 0,
   },
 
   /**
@@ -18,6 +22,19 @@ Page({
         this.setData({
           orderinfo:res.data
         })
+      }
+    })
+    wx.request({
+      url: 'http://brucemarkdown.top:5000/get_my_package',
+      data:{
+        uid:getApp().globalData.uid,
+      },
+      method:'POST',
+      success:(res)=>{
+        this.setData({
+          myorderinfo:res.data
+        })
+        console.log(this.data.myorderinfo)
       }
     })
   },
@@ -62,6 +79,12 @@ Page({
    */
   onShow: function () {
     this.onLoad();
+  },
+
+  navbarTap: function(e) {
+    this.setData({
+      currentTab: e.currentTarget.dataset.idx
+    })
   },
 
   /**
