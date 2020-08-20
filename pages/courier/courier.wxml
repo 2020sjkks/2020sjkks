@@ -1,3 +1,10 @@
+<view class="navbar">
+  <lable wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">
+    <text>{{item}}</text>
+  </lable>
+</view>
+
+<view hidden="{{currentTab!==0}}">
 <view class='order_list'>
   <block wx:for='{{orderinfo}}' wx:key='index'>
     <view class='detail' style='margin-top: 10rpx;'>
@@ -22,4 +29,33 @@
     </view>
     <view class='division2'></view>
   </block>
+</view>
+</view>
+
+<view hidden="{{currentTab!==1}}">
+<view class='order_list'>
+  <block wx:for='{{myorderinfo}}' wx:key='index'>
+    <view class='detail' style='margin-top: 10rpx;'>
+      <text style='color: #d0d0d0;'>订单号</text>
+      <text style='font-size:30rpx;'>{{item[0]}}</text>
+    </view>
+    <view class='detail' style='margin-top: 10rpx;'>
+      <text style='color: #d0d0d0;'>地址</text>
+      <text style='font-size:30rpx;'>{{item[1]}}</text>
+    </view>
+        <view class='detail' style='margin-top: 10rpx;'>
+      <text style='color: #d0d0d0;'>手机号</text>
+      <text style='font-size:30rpx;'>{{item[2]}}</text>
+    </view>
+        <view class='detail' style='margin-top: 10rpx;'>
+      <text style='color: #d0d0d0;'>时间</text>
+      <text style='font-size:30rpx;'>{{item[3]}}</text>
+    </view>
+    <view class='division'></view>
+    <view class='page_row'>
+      <button class='btn1' data-index="{{index}}" bindtap='end'>已送达</button>
+    </view>
+    <view class='division2'></view>
+  </block>
+</view>
 </view>
