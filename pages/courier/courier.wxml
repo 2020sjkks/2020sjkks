@@ -51,9 +51,14 @@
       <text style='color: #d0d0d0;'>时间</text>
       <text style='font-size:30rpx;'>{{item[3]}}</text>
     </view>
+      <view class='detail' style='margin-top: 10rpx;'>
+      <text style='color: #d0d0d0;'>状态</text>
+      <text style='font-size:30rpx;' wx:if='{{item[4]==2}}'>配送中</text>
+      <text style='font-size:30rpx;' wx:if='{{item[4]==3}}'>已送达</text>
+    </view>
     <view class='division'></view>
     <view class='page_row'>
-      <button class='btn1' data-index="{{index}}" bindtap='end'>已送达</button>
+      <button class='btn1' data-index="{{index}}" bindtap='end_game'>已送达</button>
     </view>
     <view class='division2'></view>
   </block>

@@ -38,6 +38,33 @@ Page({
       }
     })
   },
+  end_game:function(e){
+    var index=parseInt(e.currentTarget.dataset.index);
+    wx.request({
+      url: 'http://brucemarkdown.top:5000/end_game',
+      method:'POST',
+      data: {
+        oid:this.data.myorderinfo[index][0],
+      },
+      success:(res)=>{
+        if(res.data=='succeed'){
+          wx.showModal({
+            title:'已送达！',
+            content:"谢谢你的劳动",
+            showCancel:false
+          })
+          this.onLoad();
+        }
+        else{
+          wx.showToast({
+            title: '接单失败！',
+            icon:'none'
+          })
+        }
+      }
+    })
+  },
+
   be_a_courier:function(e){
     var index=parseInt(e.currentTarget.dataset.index);
     console.log(getApp().globalData.uphone);
