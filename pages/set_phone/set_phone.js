@@ -32,7 +32,7 @@ Page({
       },
       method:"POST",
       success: (res) => {
-        if(res.data=='succeed'){
+        if(res.data.state=='succeed'){
           wx: wx.showToast({
             title: '设置成功'
           })
@@ -40,6 +40,16 @@ Page({
           this.setData({
             uphone:input,
             input:''
+          })
+        }else if(res.data.state=='fail'){
+          wx: wx.showToast({
+            title: '设置失败，请检查网络',
+            icon:'none'
+          })
+        }else{
+          wx: wx.showToast({
+            title: '手机号码格式错误',
+            icon:'none'
           })
         }
     }})

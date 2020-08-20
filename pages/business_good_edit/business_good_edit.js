@@ -76,9 +76,15 @@ Page({
             console.log(res.data.gid);
             this.editPhoto(res.data.gid);
           }
+          else if(res.data=='fail'){
+            wx.showToast({
+              title: '修改失败,请检查网络',
+              icon:'none'
+            });
+          }
           else{
             wx.showToast({
-              title: '添加失败',
+              title: '价格不能为负或价格格式错误',
               icon:'none'
             });
           }
@@ -104,9 +110,15 @@ Page({
             });
             this.editPhoto(this.data.good_id);
           }
+          else if(res.data=='fail'){
+            wx.showToast({
+              title: '修改失败,请检查网络',
+              icon:'none'
+            });
+          }
           else{
             wx.showToast({
-              title: '修改失败',
+              title: '价格不能为负或价格格式错误',
               icon:'none'
             });
           }
