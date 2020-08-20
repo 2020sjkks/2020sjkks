@@ -1,6 +1,9 @@
 <view class='order_list'>
   <block wx:for='{{order_data}}' wx:key='index'>
-    <view class='money' wx:if='{{item[2]==2}}'>已完成
+    <view class='money' wx:if='{{item[2]==3}}'>已完成
+      <text>{{item[4]}}</text>
+    </view>
+    <view class='money' wx:if='{{item[2]==2}}'>配送中
       <text>{{item[4]}}</text>
     </view>
         <view class='money' wx:if='{{item[2]==1}}'>待接单
@@ -9,7 +12,8 @@
         <view class='money' wx:if='{{item[2]==0}}'>制作中
       <text>{{item[4]}}</text>
     </view>
-    <image wx:if='{{item[2]==2}}' src='/imgs/finish.png'></image>
+    <image wx:if='{{item[2]==3}}' src='/imgs/finish.png'></image>
+    <image wx:if='{{item[2]==2}}' src='/imgs/配送.png'></image>
     <image wx:if='{{item[2]==1}}' src='/imgs/接单中.png'></image>
     <image wx:if='{{item[2]==0}}' src='/imgs/制作任务.png'></image>
     <view class='detail'>
