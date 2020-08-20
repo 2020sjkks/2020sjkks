@@ -15,8 +15,11 @@
   <view>
     <text class='t'>配送地址：{{address}}</text>
   </view>
+  <view>
+    <text class='t'>配送员电话：{{courier_phone}}</text>
+  </view>
 </view>
-<view class='divideline'></view>
+<view class='divideline' ></view>
 <view class='list'>
   <block  wx:for="{{goods}}" wx:key="index">
   <view class='list_item'>
@@ -35,3 +38,5 @@
 </view> 
 <view class="divideline"></view>
 <text class="totalprice">已支付：{{totalprice}}元</text>
+<view class='divideline' ></view>
+
