@@ -86,6 +86,20 @@ page{
   align-items:center;
   border: 1px solid #7bbfea;
 }
+
+.btn2{
+  background: #fff;
+  color: gray;
+  border-radius: 10rpx;
+  margin-top: 20rpx;
+  font-size: 30rpx;
+  width: 100rpx;
+  height: 50rpx;
+  display:flex; 
+  justify-content:center; 
+  align-items:center;
+  border: 1px solid gray;
+}
 .page_row{
   display: flex;
 }

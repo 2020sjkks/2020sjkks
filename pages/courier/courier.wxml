@@ -58,7 +58,8 @@
     </view>
     <view class='division'></view>
     <view class='page_row'>
-      <button class='btn1' data-index="{{index}}" bindtap='end_game'>已送达</button>
+      <button class='btn1' data-index="{{index}}" wx:if='{{item[4]==2}}' bindtap='end_game'>交货</button>
+      <button class='btn2' data-index="{{index}}" wx:if='{{item[4]==3}}' >已送达</button>
     </view>
     <view class='division2'></view>
   </block>
