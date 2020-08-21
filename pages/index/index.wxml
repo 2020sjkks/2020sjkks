@@ -1,8 +1,13 @@
-<scroll-view class='box-sv' scroll-x >
-<image mode="aspectFit" src="/imgs/best.jpg"></image>
-<image class="img" wx:for="{{best}}" wx:key="index" src='http://brucemarkdown.top:5000/image/{{goods[item][2]}}.jpg?{{random}}' bindtap='get_good_info' mode="aspectFill" data-index="{{item}}"></image>
-</scroll-view>
-<view class="title2">菜品列表</view>
+<view class='pageBox pageTwo'>
+  <swiper class='swiperClass' autoplay indicator-color="#a39f99" indicator-active-color="#f49641" indicator-dots  interval="2000" duration="1000" previous-margin="60px" next-margin="60px" circular bindchange="bindchange" style='height: {{swiperHeight}}px'>
+  <block wx:for="{{best}}" wx:key="index">
+    <swiper-item>
+      <image  class="slide-image {{swiperIdx == index ? 'active' : 'quiet'}}" src='http://brucemarkdown.top:5000/image/{{goods[item][2]}}.jpg?{{random}}' bindtap='get_good_info' mode="aspectFill" data-index="{{item}}" ></image>
+    </swiper-item>
+  </block>
+ </swiper>
+</view>
+
 <view class='list'>
   <block  wx:for="{{goods}}" wx:key="index">
   <view class='list_item'>

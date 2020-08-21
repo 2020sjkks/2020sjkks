@@ -1,12 +1,13 @@
 page{
   background: #F6F6F6;
 }
-.title2{
-  font-size: 22px;
-  color: red;
-  text-shadow:1px 1px 1px #cccccc;
-  text-align: center;
-}
+
+.pageTwo .swiperClass {margin: 0;margin-top: 10px;}
+.pageTwo .slide-image {width: 100%;height: 100%;border-radius: 10px;position: relative;box-shadow: 0 0 10rpx rgba(0, 0, 0, .8)}
+.pageTwo image.active {transform: none;transition: all 0.2s ease-in 0s;box-shadow: 0 0 5rpx}
+.pageTwo image.quiet {transform: scale(0.8333333);transition: all 0.2s ease-in 0s;}
+
+
 .box-sv{
   width: 700rpx;
   padding: 30rpx 0;
