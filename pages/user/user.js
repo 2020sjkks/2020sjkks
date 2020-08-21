@@ -9,8 +9,45 @@ Page({
     uphoto:null,
     uaddress:null,
     upassword:null,
-    uphone:null
+    uphone:null,
+    img_src:null,
+    random:'',
   },
+
+  changeAvatar:function(){
+    var that = this 
+    const id=that.data.uid
+    wx.chooseImage({
+      count: 1,
+      success(res) {
+        const tempFilePath = res.tempFilePaths[0];
+        wx.uploadFile({
+           url: 'http://brucemarkdown.top:5000/upload_user_photo',
+           filePath: tempFilePath,
+           name: 'file',
+           formData: {
+             uid:id
+           },
+           success(res) {
+             if(res.data='succeed'){
+              wx: wx.showToast({
+                title: '修改成功',
+                icon:'none'
+              })
+              that.onLoad()
+             }
+           }
+         })   
+      }
+    })
+  },
+
+  noimage:function(e){
+    this.setData({
+      img_src:'../../imgs/头像.png'
+    })
+  },
+  
   exit:function(){
     wx.reLaunch({
       url: '/pages/login/login',
@@ -38,13 +75,18 @@ Page({
   onLoad: function (options) {
     var app=getApp(); 
     this.setData({
+      random:Math.random() / 9999
+    })
+    this.setData({
       uid:app.globalData.uid,
       uname:app.globalData.uname,
       uphoto:app.globalData.uphoto,
       uaddress:app.globalData.uaddress,
       upassword:app.globalData.upassword,
-      uphone:app.globalData.uphone
+      uphone:app.globalData.uphone,
+      img_src:'http://brucemarkdown.top:5000/image/u'+app.globalData.uid+'.jpg'+'?'+this.data.random,
     })
+    console.log(this.data.img_src)
   },
 
   /**
