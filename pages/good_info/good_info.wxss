@@ -12,7 +12,7 @@
 .price{ 
   color:#FF2727;
   margin-top: 10px;
-  margin-left: 170px;
+  margin-left: 190px;
   margin-bottom: 10px;
   font-size: 25px;
 }
@@ -43,7 +43,6 @@
 .divLine{
   background: #E0E3DA;
   width: 100%;
-  margin-left: 30px;
   height: 5rpx;
  }
 .pic{
