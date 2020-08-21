@@ -1,7 +1,12 @@
-<image src='{{img_src}}' binderror='noimage' bindtap='changeAvatar' ></image>
+<view class='imagesize'>
+  <image src='{{img_src}}' class='in-image' binderror='noimage' bindtap='changeAvatar'>
+  </image>
+</view>
+
  <view class='user1'>
  <view class="name1"></view>
  </view>
+ <view class="line"></view>
  <view class='item' bindtap="set_phone">
     <view class="title">手机绑定</view>
     <view class="detail2">
@@ -17,8 +22,6 @@
   </view>
 </view>
 <view class="line"></view>
-
-<view class="hr"></view>
 <view class="item" bindtap="set_user">
   <view class="title">账户设置</view>
   <view class="detail2">

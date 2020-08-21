@@ -15,11 +15,12 @@
 </view>
 </view>
 
-<view class="detail">商品评价：
-</view>
+<view class="detail">商品评价：</view>
+<view class="divLine"></view>
 <view class='list'>
   <block wx:for="{{comment}}" wx:key="index">
     <view class='name_time'>
+    <image src='http://brucemarkdown.top:5000/image/{{item[3]}}.jpg' class='image_radius'></image>
     <view class='name2'>{{item[0]}}</view>
     <view class='time'>{{item[1]}}</view>
     </view>
@@ -27,6 +28,7 @@
     <view class="divLine"></view>
   </block>
 </view>
+<view class="divLine"></view>
 
  <!--分割-->
  
