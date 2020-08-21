@@ -3,10 +3,12 @@ Page({
     // 数据源
     goods:[//0:gid,1:gname,2:gphoto,3,gprice
     ],
+    sales:[],
     random:''
   },
   onLoad:function(options){ 
     this.getGoods();
+    this.get_sales();
     this.setData({
       random:Math.random() / 9999
     })
@@ -24,10 +26,22 @@ Page({
         })},
     })
   },
+  get_sales:function(){
+    wx.request({
+      url: 'http://brucemarkdown.top:5000/sales',
+      success:(res)=>{
+        this.setData({
+          sales:res.data
+        });
+        console.log(res.data);
+        if(res.data==null)this.setData({sales:0});
+      }
+    })
+  },
   get_good_info:function(e){
     var index=parseInt(e.currentTarget.dataset.index);
     wx.navigateTo({  //提交参数到商品明细页：商品id
-      url: '/pages/good_info/good_info?good_id='+this.data.goods[index][0]
+      url: '/pages/good_info/good_info?good_id='+this.data.goods[index][0]+'&sales='+this.data.sales[index]
     })
   },
   newGood:function(){
