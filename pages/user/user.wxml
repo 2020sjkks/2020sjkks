@@ -1,3 +1,4 @@
+<image src='{{img_src}}' binderror='noimage' bindtap='changeAvatar' ></image>
  <view class='user1'>
  <view class="name1"></view>
  </view>
