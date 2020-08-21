@@ -50,6 +50,21 @@ Page({
     })
   },
 
+   //移动选点
+ onChangeAddress: function () {
+  var _page = this;
+  wx.chooseLocation({
+   success: function (res) {
+    _page.setData({
+     input: res.name
+    });
+   },
+   fail: function (err) {
+    console.log(err)
+   }
+  });
+ },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
