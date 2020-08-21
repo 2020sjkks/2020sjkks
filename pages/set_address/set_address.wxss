@@ -2,10 +2,16 @@
   border:  2px solid rgb(123,191,234);
   border-radius: 10px;
   margin-left: 15px;
-  margin-right: 15px;
+  margin-right: 5px;
   margin-top: 15px;
   color: gray;
   font-size:11px;
+  width: 270px;
+  height: 20px;
+}
+.box2{
+  display: flex;
+  margin-left: 33px;
 }
 .placeholder1{
   font-size: 11px;
@@ -34,3 +40,12 @@
   font-size: 14px;
   color: gray;
 }
+
+.fuhao{
+  width: 20px;
+  height:95rpx;
+  font-size: 30px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+ }

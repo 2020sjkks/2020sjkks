@@ -1,5 +1,8 @@
 <view class='small'>
 <view class='nowphone'>您目前的地址：{{uaddress}}</view>
+ <view class="box2">
 <input placeholder-class="placeholder1" class="input1" placeholder="地址" bindinput='getinput' value='{{input}}' />
+<view class="fuhao" bindtap="onChangeAddress"><image style="width:40rpx;height:40rpx;" src="../../imgs/地址.png"></image></view>
+</view>
 <button class="button1" bindtap="setaddress">设置</button>
 </view>
