@@ -7,7 +7,8 @@ Page({
     shopping_cart:{     //购物车商品 {菜品Aid:数量,菜品Bid:数量...}
     },
     best:[],
-    random:''
+    random:'',
+    swiperIdx: 0
   },
   onLoad:function(options){ 
     this.setData({
@@ -73,6 +74,11 @@ Page({
     var index=parseInt(e.currentTarget.dataset.index);
     wx.navigateTo({  //提交参数到商品明细页：商品id
       url: '/pages/good_info/good_info?good_id='+this.data.goods[index][0]+'&sales='+this.data.sales[index]
+    })
+  },
+  bindchange(e) {
+    this.setData({
+      swiperIdx: e.detail.current
     })
   },
   add_good:function(e){  //菜品添加到购物车

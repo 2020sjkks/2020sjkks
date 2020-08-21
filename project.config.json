@@ -17,14 +17,15 @@
 		"checkInvalidKey": true,
 		"checkSiteMap": true,
 		"uploadWithSourceMap": true,
+		"compileHotReLoad": false,
 		"babelSetting": {
 			"ignore": [],
 			"disablePlugins": [],
 			"outputPath": ""
 		},
 		"useCompilerModule": true,
-		"userConfirmedUseCompilerModuleSwitch": false,
-		"useIsolateContext": true
+		"useIsolateContext": true,
+		"userConfirmedUseCompilerModuleSwitch": false
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.11.2",
