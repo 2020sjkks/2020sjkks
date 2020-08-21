@@ -1,11 +1,15 @@
-.avatar{
-  height: 50px;
-  width: 50px;
-  border-radius: 25px;
-  margin-left: auto;
-  margin-top: 10px;
-  margin-bottom: 10px;
+.imagesize{
+ display:flex;                  
+ justify-content: center;    
+ margin-top: 10px;
+ margin-bottom: 10px;
 }
+.imagesize image { 
+  width:110px;
+  height:110px;
+  border-radius: 55px;
+  border:2px solid rgb(123,191,234);
+  }
 .hr {
   width: 100%;
   height: 15px;

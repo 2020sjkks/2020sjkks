@@ -53,7 +53,7 @@ Page({
         var comm=[]
         for ( var i = 0; i <res.data.comment.length; i++){
           if(res.data.comment[i][0]!=undefined){
-            console.log(res.data.comment[i])
+            console.log(res.data.comment[i][3])
             comm.push(res.data.comment[i])
           }
         }
