@@ -86,11 +86,22 @@ Page({
       　　 var prevPage = pages[pages.length - 2]       //获取上一个页面
       　　 prevPage.onLoad();
         }
+        else if(res.data.result=='wrong'){
+          console.log(res);
+          wx.hideLoading();
+          wx.showToast({
+            title: '请检查地址和电话号码',
+            icon:"none"
+          });
+          this.setData({
+            buttonDisable:false
+          });
+        }
         else {
           console.log(res);
           wx.hideLoading();
           wx.showToast({
-            title: '下单失败',
+            title: '网络错误',
             icon:"none"
           });
           this.setData({
