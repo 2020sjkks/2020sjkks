@@ -11,10 +11,10 @@
 
 .name{
   color:black;
-  margin-left: 10px;
+  margin-left: 20px;
   margin-top: 10px;
   margin-bottom: 10px;
-  font-size: 30px;
+  font-size: 25px;
 }
 .price{ 
   color:#FF2727;
@@ -28,6 +28,7 @@
   margin-left: 180px;
   margin-top: 7px;  
   margin-bottom: 7px;
+  font-size: 16px;
 }
 .good{
   display: flex;
@@ -38,8 +39,17 @@
   margin-left: 20px;
   margin-right: 20px;
   margin-top: 10px;   
-  font-size: 23px;
+  font-size: 19px;
   margin-bottom: 10px;
+}
+.title1{
+  color:black;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 10px;   
+  font-size: 20px;
+  margin-bottom: 10px;
+  color:rgb(123,191,234)
 }
 .img{
   display: flex; 
@@ -63,13 +73,14 @@
   margin-left: 30px;
   margin-right: 30px;
   margin-bottom: 10px;
-  color:rgb(82, 72, 58);
+  color:rgb(46, 46, 46);
 }
 .sales{
   margin-left: 20px;
   margin-top: 7px;  
   margin-bottom: 7px;
   color:rgb(123,191,234);
+  font-size: 16px;
 }
 .name_time{
   display: flex;
@@ -77,9 +88,9 @@
   margin-top: 10px;
 }
 .name2{
-  color:rgb(123,191,234);
-  margin-left: 30px;
-  margin-top: 5px;
+  color:gray;
+  margin-left: 20px;
+  margin-top: 3px;
   font-size: 20px;
   width:50%;
   display:inline-block;

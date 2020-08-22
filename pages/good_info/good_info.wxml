@@ -15,7 +15,7 @@
 </view>
 </view>
 
-<view class="detail">商品评价：</view>
+<view class="title1">商品评价：</view>
 <view class="divLine"></view>
 <view class='list'>
   <block wx:for="{{comment}}" wx:key="index">
