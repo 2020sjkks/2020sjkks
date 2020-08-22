@@ -1,13 +1,14 @@
 .input1{
   border:  2px solid rgb(123,191,234);
   border-radius: 10px;
-  margin-left: 15px;
-  margin-right: 5px;
+  margin-left: 20px;
   margin-top: 15px;
   color: gray;
   font-size:11px;
-  width: 270px;
+  width: 200px;
   height: 20px;
+  text-align:center;
+  vertical-align:middle
 }
 .box2{
   display: flex;
@@ -45,6 +46,8 @@
   height:95rpx;
   font-size: 30px;
   display: flex;
+  margin-top: 3px;
+  margin-left: 10px;
   flex-direction: row-reverse;
   align-items: center;
  }
