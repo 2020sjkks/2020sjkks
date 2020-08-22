@@ -19,9 +19,9 @@
       制作中
       <text>{{item[4]}}</text>
     </view>
-    <image wx:if='{{item[2]==2}}' src='/imgs/配送.png'></image>
-    <image wx:if='{{item[2]==1}}' src='/imgs/接单中.png'></image>
-    <image wx:if='{{item[2]==0}}' src='/imgs/制作任务.png'></image>
+    <image wx:if='{{item[2]==2}}' src='/imgs/d2.png'></image>
+    <image wx:if='{{item[2]==1}}' src='/imgs/d1.png'></image>
+    <image wx:if='{{item[2]==0}}' src='/imgs/d0.png'></image>
     <view class='detail'>
       <text style='color: #d0d0d0;'>订单号</text> {{item[0]}}</view>
     <view class='detail' style='margin-top: 10rpx;'>
