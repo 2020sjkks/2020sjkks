@@ -1,10 +1,10 @@
 <view class='small'>
 <view class='nowphone'>您目前的用户名：{{uname}}</view>
-<input placeholder-class="placeholder1" class="input1" placeholder="新用户名" bindinput='get_input_name' value='{{input_name}}' />
+<input placeholder-class="placeholder1" class="input1" placeholder="新用户名" bindinput='get_input_name' maxlength='15' value='{{input_name}}' />
 <button class="button1" bindtap="set_name">设置</button>
   <view class="divLine"></view>
 <view class='nowphone'>设置新密码：</view>
-<input placeholder-class="placeholder1" class="input1" placeholder="原密码" bindinput='get_input_ori_password' value='{{input_ori_password}}' />
-<input placeholder-class="placeholder1" class="input1" placeholder="新密码" bindinput='get_input_new_password' value='{{input_new_password}}' />
+<input placeholder-class="placeholder1" class="input1" maxlength='15' placeholder="原密码" bindinput='get_input_ori_password' value='{{input_ori_password}}' />
+<input placeholder-class="placeholder1" class="input1" maxlength='15' placeholder="新密码" bindinput='get_input_new_password' value='{{input_new_password}}' />
 <button class="button1" bindtap="set_password">设置</button>
 </view>
