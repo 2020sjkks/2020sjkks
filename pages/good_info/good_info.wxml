@@ -10,7 +10,7 @@
 <view class='introd' >评分:{{score}}</view>
 </view>
 <view class="good">
-<view class="detail">商品详情:
+<view class="detail">
   {{good_detail}}
 </view>
 </view>

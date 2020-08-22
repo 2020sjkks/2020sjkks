@@ -49,6 +49,16 @@ Page({
       })
       return false
     }
+    else if(input_name=='管理员'){
+      wx: wx.showToast({
+        title: '用户名已存在',
+        icon:'none'
+      })
+      this.setData({
+        input_name:''
+      })
+      return false
+    }
     else{
       wx.request({
         url: 'http://brucemarkdown.top:5000/set_user_name',
@@ -70,10 +80,30 @@ Page({
             var app=getApp()
             app.globalData.uname=input_name
           }
-        }
-      })
-    }
-  },
+          else if (res.data='exist'){
+            wx: wx.showToast({
+              title: '用户名已存在',
+              icon:'none'
+            })
+            this.setData({
+              input_name:''
+            })
+            return false
+          }
+          else if(res.data=='fali'){
+            wx: wx.showToast({
+              title: '修改失败',
+              icon:'none'
+            })
+            this.setData({
+              input_name:''
+            })
+            return false
+          }
+          }
+        })
+      }
+    },
   set_password(){
     let input_ori_password=this.data.input_ori_password
     let input_new_password=this.data.input_new_password
