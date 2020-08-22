@@ -6,7 +6,7 @@
 <view class="blank1"></view>
 <view class="good">
   <input class='name' model:value='{{good_name}}'></input>
-  <view class="price">￥<input class="num" model:value='{{good_price}}'></input></view>
+  <view class="price"><input class="num" model:value='{{good_price}}'></input></view>
 </view>
 <textarea class="detail" model:value='{{good_detail}}'></textarea>
 <button class="btn" bindtap="finish">完成</button>

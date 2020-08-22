@@ -25,9 +25,11 @@
 }
 .price{ 
   color:#FF2727;
-  margin-left: 30px;
+  margin-top: 10px;
+  float: right;
+  padding-right: 20px;
+  margin-bottom: 10px;
   font-size: 25px;
-  display: flex;
 }
 .price .num{
   font-size: 27px;
@@ -36,6 +38,9 @@
 .good{
   display: flex;
   border-bottom:1px solid #F6F6F6;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 .detail{
   border-bottom:1px solid #F6F6F6;
