@@ -14,25 +14,30 @@
   margin-left: 20px;
   margin-top: 10px;
   margin-bottom: 10px;
-  font-size: 25px;
+  font-size: 23px;
 }
 .price{ 
   color:#FF2727;
   margin-top: 10px;
-  margin-left: 170px;
+  float: right;
+  padding-right: 30px;
   margin-bottom: 10px;
   font-size: 25px;
 }
 .introd{ 
   color:rgb(123,191,234);
-  margin-left: 180px;
+  float:right;
+  padding-right: 33px;
   margin-top: 7px;  
   margin-bottom: 7px;
   font-size: 16px;
 }
 .good{
-  display: flex;
   border-bottom:1px solid #F6F6F6;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 .detail{
   color:black;
@@ -84,12 +89,14 @@
 }
 .name_time{
   display: flex;
-  flex-flow:row;
   margin-top: 10px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 .name2{
   color:gray;
-  margin-left: 20px;
+  margin-left: 1px;
   margin-top: 3px;
   font-size: 20px;
   width:50%;
@@ -99,6 +106,7 @@
   font-size: 13px;
   margin-top: 5px;
   float:right;
+  padding-right: 30px;
   color:gray;
   text-align:right;
 }
