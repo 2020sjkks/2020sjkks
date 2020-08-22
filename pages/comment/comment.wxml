@@ -11,6 +11,6 @@
       </view>
     </view>
   </view>
-<input placeholder-class="placeholder1" class="input1" placeholder="修改评价" bindinput='getinput' value='{{input}}' />
+<input placeholder-class="placeholder1" class="input1" maxlength='20' placeholder="修改评价(20字内)" bindinput='getinput' value='{{input}}' />
 <button class="button1" bindtap="setcomment">提交修改</button>
 </view>

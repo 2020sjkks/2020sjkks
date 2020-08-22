@@ -1,5 +1,5 @@
 <view class='small'>
 <view class='nowphone'>您目前的号码：{{uphone}}</view>
-<input placeholder-class="placeholder1" class="input1" placeholder="号码" bindinput='getinput' value='{{input}}' />
+<input placeholder-class="placeholder1" class="input1" placeholder="号码" maxlength='11' bindinput='getinput' value='{{input}}' />
 <button class="button1" bindtap="setphone">设置</button>
 </view>
