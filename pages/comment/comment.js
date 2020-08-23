@@ -33,8 +33,8 @@ Page({
       },
       {
         flag: 1,
-        bgImg:"/imgs/star1.png",
-        bgfImg: "/imgs/star2.png"
+        bgImg:"/imgs/star1.jpg",
+        bgfImg: "/imgs/star2.jpg"
       }
     ]
   },
