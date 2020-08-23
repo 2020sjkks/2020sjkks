@@ -44,7 +44,7 @@ Page({
 
   noimage:function(e){
     this.setData({
-      img_src:'../../imgs/头像.jpg'
+      img_src:'/imgs/head.jpg'
     })
   },
   

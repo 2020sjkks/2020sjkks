@@ -1,9 +1,18 @@
 .orderinfo_title{
-  font-size: 25px;
-  color: black;
-  text-shadow:1px 1px 1px #cccccc;
-  margin-left: 10px;
-  margin-top: 15px;
+    margin-top: 5px;
+    font-size: 25px;
+    color: #7bbfea;
+    align-self: center;
+    display: flex; /*设置显示样式**/
+  
+  align-items: center; /**子view垂直居中*/
+  
+  vertical-align: center; /**垂直居中*/
+  
+  justify-content: center; /**内容居中*/
+  
+  flex-direction: row;
+  
 }
 .divideline{
   margin-top: 10px;
@@ -14,10 +23,13 @@
   margin-bottom: 10px;
   margin-left:10px;
 }
+
 .list{
   margin-top:10px;
   height: 100px ;
 }
+
+
 
 .list .list_item{
   margin-top:10px;

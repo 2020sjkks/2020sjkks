@@ -1,4 +1,4 @@
-<text class="title">菜品</text>
+<text class="main">菜品编辑</text>
 <view class='list'>
   <block  wx:for="{{goods}}" wx:key="index">
   <view class='list_item'>

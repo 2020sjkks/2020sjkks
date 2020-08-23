@@ -13,28 +13,28 @@ Page({
     stars:[
       {
         flag:1,
-        bgImg: "/imgs/star1.png",
-        bgfImg:"/imgs/star2.png"
+        bgImg: "http://brucemarkdown.top:5000/image/star1.jpg",
+        bgfImg:"http://brucemarkdown.top:5000/image/star2.jpg"
       },
       {
         flag: 1,
-        bgImg: "/imgs/star1.png",
-        bgfImg: "/imgs/star2.png"
+        bgImg: "http://brucemarkdown.top:5000/image/star1.jpg",
+        bgfImg: "http://brucemarkdown.top:5000/image/star2.jpg"
       },
       {
         flag: 1,
-        bgImg:"/imgs/star1.png",
-        bgfImg: "/imgs/star2.png"
+        bgImg:"http://brucemarkdown.top:5000/image/star1.jpg",
+        bgfImg: "http://brucemarkdown.top:5000/image/star2.jpg"
       },
       {
         flag: 1,
-        bgImg: "/imgs/star1.png",
-        bgfImg: "/imgs/star2.png"
+        bgImg: "http://brucemarkdown.top:5000/image/star1.jpg",
+        bgfImg: "http://brucemarkdown.top:5000/image/star2.jpg"
       },
       {
         flag: 1,
-        bgImg:"/imgs/star1.jpg",
-        bgfImg: "/imgs/star2.jpg"
+        bgImg:"http://brucemarkdown.top:5000/image/star1.jpg",
+        bgfImg: "http://brucemarkdown.top:5000/image/star2.jpg"
       }
     ]
   },
@@ -71,6 +71,7 @@ Page({
       //gid:1
     })
     this.get_comment()
+    console.log(this.data.stars)
   },
   get_comment(){
     wx.request({
