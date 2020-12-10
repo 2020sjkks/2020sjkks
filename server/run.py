@@ -103,8 +103,7 @@ def upload_user_photo():
     try:
         cursor.execute(sql)
         db.commit()
-        photo.save("/home/sjkks/sjk/img/u"+str(uid)+".jpg")
-        print("/home/sjkks/sjk/img/u"+str(uid)+".jpg")
+        photo.save(img_path+"u"+str(uid)+".jpg")
         return 'succeed'
     except:
         db.rollback()
