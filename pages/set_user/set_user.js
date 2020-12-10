@@ -61,7 +61,7 @@ Page({
     }
     else{
       wx.request({
-        url: 'http://brucemarkdown.top:5000/set_user_name',
+        url: getApp().globalData.server + '/set_user_name',
         data: {
           input_name:input_name,
           uid:uid
@@ -124,7 +124,7 @@ Page({
       }
       else{
         wx.request({
-          url: 'http://brucemarkdown.top:5000/set_user_password',
+          url: getApp().globalData.server + '/set_user_password',
           data: {
             input_new_password:input_new_password,
             uid:uid

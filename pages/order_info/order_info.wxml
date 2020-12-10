@@ -35,7 +35,7 @@
   <block  wx:for="{{goods}}" wx:key="index">
   <view class='list_item'>
     <view class='img'>
-      <image src="http://brucemarkdown.top:5000/image/{{item[1]}}.jpg?{{random}}" ></image>
+      <image src="{{url}}/image/{{item[1]}}.jpg?{{random}}" ></image>
     </view>
     <view class='info'>
       <view class='title' data-index="{{index}}" >{{item[0]}}</view> 

@@ -22,7 +22,7 @@ Page({
   },
   get_unaccepted_order(){
     wx.request({
-      url: 'http://brucemarkdown.top:5000/get_unaccepted_order',
+      url: getApp().globalData.server + '/get_unaccepted_order',
       success:(res)=>{
         console.log(res.data)
         this.setData({
@@ -47,7 +47,7 @@ Page({
   },
   get_all_order(){
     wx.request({
-      url: 'http://brucemarkdown.top:5000/get_all_order',
+      url: getApp().globalData.server + '/get_all_order',
       success:(res)=>{
         this.setData({
           all_order:res.data
@@ -59,7 +59,7 @@ Page({
   accept_order:function(e){
     var index=parseInt(e.currentTarget.dataset.index);
     wx.request({
-      url: 'http://brucemarkdown.top:5000/accept_order',
+      url: getApp().globalData.server + '/accept_order',
       data:{
         oid:this.data.unaccepted_order[index][0]
       },

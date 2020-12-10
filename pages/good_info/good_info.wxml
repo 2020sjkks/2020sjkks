@@ -20,7 +20,7 @@
 <view class='list'>
   <block wx:for="{{comment}}" wx:key="index">
     <view class='name_time'>
-    <image src='http://brucemarkdown.top:5000/image/{{item[3]}}.jpg?{{random}}' class='image_radius'></image>
+    <image src='{{url}}/image/{{item[3]}}.jpg?{{random}}' class='image_radius'></image>
     <view class='name2'>{{item[0]}}</view>
     <view class='time'>{{item[1]}}</view>
     </view>

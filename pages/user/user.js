@@ -22,7 +22,7 @@ Page({
       success(res) {
         const tempFilePath = res.tempFilePaths[0];
         wx.uploadFile({
-           url: 'http://brucemarkdown.top:5000/upload_user_photo',
+           url: getApp().globalData.server + '/upload_user_photo',
            filePath: tempFilePath,
            name: 'file',
            formData: {
@@ -84,7 +84,7 @@ Page({
       uaddress:app.globalData.uaddress,
       upassword:app.globalData.upassword,
       uphone:app.globalData.uphone,
-      img_src:'http://brucemarkdown.top:5000/image/u'+app.globalData.uid+'.jpg'+'?'+this.data.random,
+      img_src:getApp().globalData.server + '/image/u'+app.globalData.uid+'.jpg'+'?'+this.data.random,
     })
     console.log(this.data.img_src)
   },

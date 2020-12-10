@@ -25,7 +25,7 @@ Page({
     let uid = this.data.uid
     console.log(input)
     wx.request({
-      url: 'http://brucemarkdown.top:5000/setphone',
+      url: getApp().globalData.server + '/setphone',
       data: {
         input:input,
         uid:uid

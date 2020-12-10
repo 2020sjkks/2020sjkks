@@ -618,6 +618,5 @@ def get_best_good():
 
 
 if __name__ == '__main__':
-    #app.run(host='0.0.0.0', debug=True, port=5000,threaded=True,ssl_context=('/www/server/panel/vhost/cert/brucemarkdown.top/fullchain.pem','/www/server/panel/vhost/cert/brucemarkdown.top/privkey.pem'))
     app.run(host='0.0.0.0', debug=True, port=5000,threaded=True)
 

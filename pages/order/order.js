@@ -25,7 +25,7 @@ Page({
   },
   get_user_order:function(){
     wx.request({
-      url: 'http://brucemarkdown.top:5000/get_user_order',
+      url: getApp().globalData.server + '/get_user_order',
       data: {
         uid:this.data.uid
       },

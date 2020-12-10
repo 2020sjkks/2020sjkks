@@ -24,14 +24,13 @@ Page({
       console.log("编辑商品"+options.good_id);
       this.setData({
         good_id:options.good_id,
-        //img_path:"http://brucemarkdown.top:5000/image/"+options.img+'.jpg'
       });
       this.get_goodinfo();
     }
   },
   get_goodinfo(){
     wx.request({
-      url: 'http://brucemarkdown.top:5000/goodinfo',
+      url: getApp().globalData.server + '/goodinfo',
       method:'POST',
       data: {
         good_id:this.data.good_id,
@@ -43,7 +42,7 @@ Page({
           good_name:res.data.info[0][1],
           good_detail:res.data.info[0][2],
           good_price:res.data.info[0][4],
-          img_path:"http://brucemarkdown.top:5000/image/"+res.data.info[0][3]+'.jpg'+'?'+this.data.random,
+          img_path:getApp().globalData.server+'/image/'+res.data.info[0][3]+'.jpg'+'?'+this.data.random,
           gphoto:res.data.info[0][3]
         })
       }
@@ -70,7 +69,7 @@ Page({
     }
     if(this.data.good_id==null){//添加商品
       wx.request({
-        url: 'http://brucemarkdown.top:5000/add_good',
+        url: getApp().globalData.server + '/add_good',
         method:'POST',
         data: {
           gname:this.data.good_name,
@@ -105,7 +104,7 @@ Page({
     else { //修改商品
       console.log("提交修改");
       wx.request({
-        url: 'http://brucemarkdown.top:5000/edit_good',
+        url: getApp().globalData.server + '/edit_good',
         method:'POST',
         data: {
           gid:this.data.good_id,
@@ -142,7 +141,7 @@ Page({
     wx.uploadFile({
       filePath: this.data.img_path,
       name: 'file',
-      url: 'http://brucemarkdown.top:5000/upload_photo',
+      url: getApp().globalData.server + '/upload_photo',
       formData:{
         gid:gid
       }

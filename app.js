@@ -1,5 +1,6 @@
 App({
   globalData:{
+    server:"http://brucemarkdown.top:5000",
     uid:null,
     uname:null,
     uphoto:null,

@@ -14,7 +14,8 @@ Page({
     business:0,
     courier:'',
     courier_phone:'',
-    random:''
+    random:'',
+    url:getApp().globalData.server,
   },
   onLoad: function (options) {
     this.setData({
@@ -26,7 +27,7 @@ Page({
     });
     console.log(this.data.business);
     wx.request({
-      url: 'http://brucemarkdown.top:5000/orderinfo',
+      url: getApp().globalData.server + '/orderinfo',
       data: { 
         oid:this.data.oid,
       },

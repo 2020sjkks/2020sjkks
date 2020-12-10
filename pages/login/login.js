@@ -32,7 +32,7 @@ Page({
     }
     else{
       wx.request({
-      url: 'http://brucemarkdown.top:5000/login',
+      url: getApp().globalData.server + '/login',
       data: {
         name:name,
         password:password
@@ -102,7 +102,7 @@ Page({
     }
     else{
       wx.request({
-      url: 'http://brucemarkdown.top:5000/register',
+      url: getApp().globalData.server + '/register',
       data: {
         name:this.data.name,
         password:this.data.password

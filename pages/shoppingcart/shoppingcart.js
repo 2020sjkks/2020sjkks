@@ -8,7 +8,8 @@ Page({
     phone:'',
     buttonDisable:false,
     buttonContent:"支付",
-    buttonFunction:'pay'
+    buttonFunction:'pay',
+    url:getApp().globalData.server,
   },
   onLoad:function(options){
     this.setData({
@@ -55,7 +56,7 @@ Page({
     });
     //此处提交request
     wx.request({
-      url: 'http://brucemarkdown.top:5000/order',
+      url: getApp().globalData.server + '/order',
       data: { 
         uid:uid,
         goods:this.data.selected,  //菜品信息

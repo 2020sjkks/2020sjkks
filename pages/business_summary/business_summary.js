@@ -5,7 +5,7 @@ let chart2 = null;
 function initChart1(canvas1, width, height, dpr) {
   var option = {};
   wx.request({
-    url: 'http://brucemarkdown.top:5000/refresh_sales',
+    url: getApp().globalData.server + '/refresh_sales',
     complete:(res)=>{
       if(res.data.state=='succeed'){
         option={
@@ -75,7 +75,7 @@ function randomSort(a, b) { return Math.random() > 0.5 ? -1 : 1; }
 function initChart2(canvas2, width, height, dpr) {
   var option = {};
   wx.request({
-    url: 'http://brucemarkdown.top:5000/refresh_sales',
+    url: getApp().globalData.server + '/refresh_sales',
     complete:(res)=>{
       if(res.data.state=='succeed'){
         var percent=[];

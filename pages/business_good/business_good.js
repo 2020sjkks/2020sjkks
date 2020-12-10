@@ -4,7 +4,8 @@ Page({
     goods:[//0:gid,1:gname,2:gphoto,3,gprice
     ],
     sales:[],
-    random:''
+    random:'',
+    url:getApp().globalData.server,
   },
   onLoad:function(options){ 
     this.getGoods();
@@ -17,7 +18,7 @@ Page({
   getGoods:function(){ //获取菜品信息
     console.log("tap");
     wx.request({
-      url: 'http://brucemarkdown.top:5000/goods',
+      url: getApp().globalData.server + '/goods',
       method:'POST',
       complete: (res) => {
         //console.log(res);
@@ -28,7 +29,7 @@ Page({
   },
   get_sales:function(){
     wx.request({
-      url: 'http://brucemarkdown.top:5000/sales',
+      url: getApp().globalData.server + '/sales',
       success:(res)=>{
         this.setData({
           sales:res.data
@@ -72,7 +73,7 @@ Page({
   },
   deleteGood(index){
     wx.request({
-      url: 'http://brucemarkdown.top:5000/delete_good',
+      url: getApp().globalData.server + '/delete_good',
       method:'POST',
       data:{
         gid:this.data.goods[index][0]

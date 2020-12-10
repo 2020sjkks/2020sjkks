@@ -8,7 +8,8 @@ Page({
     },
     best:[],
     random:'',
-    swiperIdx: 0
+    swiperIdx: 0,
+    url:getApp().globalData.server,
   },
   onLoad:function(options){ 
     this.setData({
@@ -20,7 +21,7 @@ Page({
   getGoods:function(){ //获取菜品信息
     console.log("tap");
     wx.request({
-      url: 'http://brucemarkdown.top:5000/goods',
+      url: getApp().globalData.server + '/goods',
       method:'POST',
       complete: (res) => {
         //console.log(res);
@@ -35,7 +36,7 @@ Page({
               ['shopping_cart.'+item[0]]:0,
             })
             wx.request({
-              url: 'http://brucemarkdown.top:5000/get_best_good',
+              url: getApp().globalData.server + '/get_best_good',
               method:'POST',
               success:(res1)=>{
                 var best=[]
@@ -59,7 +60,7 @@ Page({
   },
   get_sales:function(){
     wx.request({
-      url: 'http://brucemarkdown.top:5000/sales',
+      url: getApp().globalData.server + '/sales',
       success:(res)=>{
         this.setData({
           sales:res.data

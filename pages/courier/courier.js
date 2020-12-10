@@ -17,7 +17,7 @@ Page({
    */
   onLoad: function (options) {
     wx.request({
-      url: 'http://brucemarkdown.top:5000/get_uncouried_order',
+      url: getApp().globalData.server + '/get_uncouried_order',
       success:(res)=>{
         this.setData({
           orderinfo:res.data
@@ -25,7 +25,7 @@ Page({
       }
     })
     wx.request({
-      url: 'http://brucemarkdown.top:5000/get_my_package',
+      url: getApp().globalData.server + '/get_my_package',
       data:{
         uid:getApp().globalData.uid,
       },
@@ -41,7 +41,7 @@ Page({
   end_game:function(e){
     var index=parseInt(e.currentTarget.dataset.index);
     wx.request({
-      url: 'http://brucemarkdown.top:5000/end_game',
+      url: getApp().globalData.server + '/end_game',
       method:'POST',
       data: {
         oid:this.data.myorderinfo[index][0],
@@ -69,7 +69,7 @@ Page({
     var index=parseInt(e.currentTarget.dataset.index);
     console.log(getApp().globalData.uphone);
     wx.request({
-      url: 'http://brucemarkdown.top:5000/be_a_courier',
+      url: getApp().globalData.server + '/be_a_courier',
       method:'POST',
       data: {
         uid:getApp().globalData.uid,

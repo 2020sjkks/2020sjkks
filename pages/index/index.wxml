@@ -2,7 +2,7 @@
   <swiper class='swiperClass' autoplay indicator-color="#a39f99" indicator-active-color="#f49641" indicator-dots  interval="2000" duration="1000" previous-margin="60px" next-margin="60px" circular bindchange="bindchange" style='height: {{swiperHeight}}px'>
   <block wx:for="{{best}}" wx:key="index">
     <swiper-item>
-      <image  class="slide-image {{swiperIdx == index ? 'active' : 'quiet'}}" src='http://brucemarkdown.top:5000/image/{{goods[item][2]}}.jpg?{{random}}' bindtap='get_good_info' mode="aspectFill" data-index="{{item}}" ></image>
+      <image  class="slide-image {{swiperIdx == index ? 'active' : 'quiet'}}" src='{{url}}/image/{{goods[item][2]}}.jpg?{{random}}' bindtap='get_good_info' mode="aspectFill" data-index="{{item}}" ></image>
     </swiper-item>
   </block>
  </swiper>
@@ -12,7 +12,7 @@
   <block  wx:for="{{goods}}" wx:key="index">
   <view class='list_item'>
     <view class='img'>
-      <image src="http://brucemarkdown.top:5000/image/{{item[2]}}.jpg?{{random}}" data-index="{{index}}" bindtap="get_good_info" ></image>
+      <image src="{{url}}/image/{{item[2]}}.jpg?{{random}}" data-index="{{index}}" bindtap="get_good_info" ></image>
     </view>
     <view class='info'>
       <view class='title' data-index="{{index}}" bindtap="get_good_info">{{item[1]}}</view> 

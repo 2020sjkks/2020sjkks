@@ -3,7 +3,7 @@
   <block  wx:for="{{goods}}" wx:key="index">
   <view class='list_item'>
     <view class='img'>
-      <image src="http://brucemarkdown.top:5000/image/{{item[2]}}.jpg?{{random}}" data-index="{{index}}" bindtap="get_good_info" ></image>
+      <image src="{{url}}/image/{{item[2]}}.jpg?{{random}}" data-index="{{index}}" bindtap="get_good_info" ></image>
     </view>
     <view class='info'>
       <view class='title' data-index="{{index}}" bindtap="get_good_info">{{item[1]}}</view> 

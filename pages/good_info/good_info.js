@@ -8,7 +8,8 @@ Page({
     score:null,
     comment:[],
     sales:null,
-    random:''
+    random:'',
+    url:getApp().globalData.server,
   },
   con:function(){
     console.log(this.data.comment)
@@ -20,7 +21,7 @@ Page({
     this.setData({
       good_id:options.good_id,
       sales:options.sales
-      //img_path:"http://brucemarkdown.top:5000/image/"+options.img+'.jpg'
+      //img_path:getApp().globalData.server+'/image/"+options.img+'.jpg'
     });
     if(options.sales[0]==null)this.setData({sales:0});
     this.get_goodinfo()
@@ -28,7 +29,7 @@ Page({
   },
   get_score(){
     wx.request({
-      url: 'http://brucemarkdown.top:5000/get_introd',
+      url: getApp().globalData.server + '/get_introd',
       method:'POST',
       data:{
         good_id:this.data.good_id
@@ -44,7 +45,7 @@ Page({
   },
   get_goodinfo(){
     wx.request({
-      url: 'http://brucemarkdown.top:5000/goodinfo',
+      url: getApp().globalData.server + '/goodinfo',
       method:'POST',
       data: {
         good_id:this.data.good_id,
@@ -66,7 +67,7 @@ Page({
           good_name:res.data.info[0][1],
           good_detail:res.data.info[0][2],
           good_price:res.data.info[0][4],
-          img_path:"http://brucemarkdown.top:5000/image/"+res.data.info[0][3]+'.jpg'+'?'+this.data.random,
+          img_path:getApp().globalData.server+'/image/'+res.data.info[0][3]+'.jpg'+'?'+this.data.random,
           comment:comm
         })
       }

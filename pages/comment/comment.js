@@ -13,28 +13,28 @@ Page({
     stars:[
       {
         flag:1,
-        bgImg: "http://brucemarkdown.top:5000/image/star1.jpg",
-        bgfImg:"http://brucemarkdown.top:5000/image/star2.jpg"
+        bgImg: getApp().globalData.server+'/image/star1.jpg',
+        bgfImg:getApp().globalData.server+'/image/star2.jpg'
       },
       {
         flag: 1,
-        bgImg: "http://brucemarkdown.top:5000/image/star1.jpg",
-        bgfImg: "http://brucemarkdown.top:5000/image/star2.jpg"
+        bgImg: getApp().globalData.server+'/image/star1.jpg',
+        bgfImg: getApp().globalData.server+'/image/star2.jpg'
       },
       {
         flag: 1,
-        bgImg:"http://brucemarkdown.top:5000/image/star1.jpg",
-        bgfImg: "http://brucemarkdown.top:5000/image/star2.jpg"
+        bgImg:getApp().globalData.server+'/image/star1.jpg',
+        bgfImg: getApp().globalData.server+'/image/star2.jpg'
       },
       {
         flag: 1,
-        bgImg: "http://brucemarkdown.top:5000/image/star1.jpg",
-        bgfImg: "http://brucemarkdown.top:5000/image/star2.jpg"
+        bgImg: getApp().globalData.server+'/image/star1.jpg',
+        bgfImg: getApp().globalData.server+'/image/star2.jpg'
       },
       {
         flag: 1,
-        bgImg:"http://brucemarkdown.top:5000/image/star1.jpg",
-        bgfImg: "http://brucemarkdown.top:5000/image/star2.jpg"
+        bgImg:getApp().globalData.server+'/image/star1.jpg',
+        bgfImg: getApp().globalData.server+'/image/star2.jpg'
       }
     ]
   },
@@ -75,7 +75,7 @@ Page({
   },
   get_comment(){
     wx.request({
-      url: 'http://brucemarkdown.top:5000/get_comment',
+      url: getApp().globalData.server + '/get_comment',
       data:{
         gid:this.data.gid,
         oid:this.data.oid
@@ -94,7 +94,7 @@ Page({
     let input = this.data.input
     let score=this.data.score
     wx.request({
-      url: 'http://brucemarkdown.top:5000/set_comment',
+      url: getApp().globalData.server + '/set_comment',
       data:{
         input:this.data.input,
         score:this.data.score,
