@@ -15,13 +15,14 @@ import datetime
 DATABASE='meituan'#数据库名称
 USER='root'#数据库用户
 PASSWORD='sjkks'#数据库密码
+img_path = '/root/2020sjkks/imgs/'
 
 app = Flask(__name__)
 @app.route('/')
 def hello_world():
     return "this is Get method!"
 
-@app.route('/goods',methods=['POST'])  #访问地址设置为http://brucemarkdown.top:5000/goods  访问方法为POST
+@app.route('/goods',methods=['POST'])  
 def goods():
     """
     用POST方法返回商品信息
@@ -64,10 +65,9 @@ def goodinfo():
 @app.route('/image/<imagename>.jpg')
 def getimage(imagename):
     '''
-    所有图片都放在/home/sjkks/sjk/img/目录下
     该函数通过文件名获取图片
     '''
-    img_local_path='/home/sjkks/sjk/img/'+imagename+'.jpg'
+    img_local_path=img_path+imagename+'.jpg'
     return send_file(img_local_path, mimetype='image/jpeg')
 
 @app.route("/upload_photo", methods=['POST']) 
@@ -83,7 +83,7 @@ def upload_photo():
     try:
         cursor.execute(sql)
         db.commit()
-        photo.save("/home/sjkks/sjk/img/"+str(postdata)+".jpg")
+        photo.save(img_path+str(postdata)+".jpg")
         return 'succeed'
     except:
         db.rollback()
