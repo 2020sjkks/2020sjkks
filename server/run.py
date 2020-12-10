@@ -15,7 +15,7 @@ import datetime
 DATABASE='meituan'#数据库名称
 USER='root'#数据库用户
 PASSWORD='sjkks'#数据库密码
-img_path = '/root/2020sjkks/imgs/'
+img_path = '/root/2020sjkks/server/imgs/'
 
 app = Flask(__name__)
 @app.route('/')
