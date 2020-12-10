@@ -25,7 +25,6 @@ Page({
       return false
     }
     else if (name=='管理员' && password=='12345'){
-      console.log('!!!!!!!')
       wx.redirectTo({
         url: '/pages/business_home/business_home'
       })
