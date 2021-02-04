@@ -40,13 +40,13 @@
   source yourpath/2020sjkks/server/Database/setup.sql
   ```
 
-- 在`server/run.py` 的开头设置数据库参数，如下
+- 在`server/run.py` 的开头设置数据库参数，示例:
 
   ```python
   DATABASE='meituan'#数据库名称
   USER='root'#数据库用户
   PASSWORD='sjkks'#数据库密码
-  img_path = '/root/2020sjkks/server/imgs/' ＃图片缓存文件夹 注意最后带有/
+  img_path = 'yourpath/2020sjkks/server/imgs/' ＃图片缓存文件夹 注意最后带有/
   ```
 
 - 运行`run.py`
